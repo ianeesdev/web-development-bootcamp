@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- ===== CSS ===== -->
+    <!-- <link rel="stylesheet" href="form.css"> -->
+         
+    <title>Registration Form</title>
+    <style>
+        /* ===== Google Font Import - Poformsins ===== */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        /* Reset */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #141414, #9b59b6);
+        }
+
+        /* Entire form */
+        .container{
+            position: relative;
+            max-width: 430px;
+            width: 100%;
+            background: #141414;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 0 20px;
+        }
+
+        /* Form settings for input */
+        .container .form .login{
+            display: flex;
+            align-items: center;
+            height: 440px;
+            width: 200%;
+            transition: height 0.2s ease;
+        }
+
+        /* Form settings for signup */
+        .container .form .signup{
+            display: flex;
+            align-items: center;
+            height: 600px;
+            width: 200%;
+            transition: height 0.2s ease;
+        }
+
+        /* Text fields + Button setting */
+        .container .form{
+            width: 50%;
+            padding: 30px;
+            background-color: #141414;
+            transition: margin-left 0.18s ease;
+        }
+
+        /* Heading */
+        .container .form .title{
+            position: relative;
+            font-size: 27px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        /* Heading line */
+        .form .title::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            background-color: #9b59b6;
+            border-radius: 25px;
+        }
+
+        /* All input fields */
+        .form .input-field{
+            position: relative;
+            height: 50px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        /* Each input of input field */
+        .input-field input{
+            position: absolute;
+            height: 100%;
+            width: 225%;
+            padding: 0 35px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            border-bottom: 2px solid #fff;
+            border-top: 2px solid transparent;
+            transition: all 0.2s ease;
+            background-color: #141414;
+            color: white;
+        }
+
+        /* Line color on valid entry */
+        .input-field input:is(:focus, :valid){
+            border-bottom-color: #9b59b6;
+        }
+
+        /* All icons of input fields */
+        .input-field i{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 23px;
+            transition: all 0.2s ease;
+        }
+
+        /* Icon color on valid entry */
+        .input-field input:is(:focus, :valid) ~ i{
+            color: #9b59b6;
+        }
+
+        /* Each icon of input field */
+        .input-field i.icon{
+            left: 0;
+        }
+
+        /* ShowHidePw icon for Confirm Password */
+        .input-field i.showHidePw{
+            left: 300px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Text Entry */
+        .form .text{
+            color: #fff;
+            font-size: 14px;
+        }
+
+        /* Each text entry */
+        .form a.text{
+            color: white;
+            text-decoration: none;
+        }
+
+        .form a:hover{
+            text-decoration: underline;
+        }
+
+        .form .button{
+            margin-top: 35px;
+        }
+
+        /* Login / Next Button */
+        .form .button input{
+            border: none;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            background-color:#9b59b6;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button input:hover{
+            background-color: #775088;
+        }
+
+        .form .login-signup{
+            margin-top: 30px;
+            text-align: center;
+        }</style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="forms">
+            <div class="form signup">
+
+                <!-- Registration Heading -->
+                <span class="title">Registration</span>
+
+                <!-- Next Link After Clicking Next-->
+                <form action="#" method="post">
+
+                    <!-- Name text field -->
+                    <div class="input-field">
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+
+                    <!-- Email text field -->
+                    <div class="input-field">
+                        <input type="text" name="email" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+
+                    <!-- Password text field -->
+                    <div class="input-field">
+                        <input type="password" name="pass" class="password" placeholder="Create a password" required>
+                        <i class="uil uil-lock icon"></i>
+                    </div>
+
+                    <!-- Confirm Password text field -->
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Confirm a password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <!-- Sign up Button -->
+                    <div class="input-field button">
+                        <button><input type="button" value="Next" id="signUpBtn"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="form.js"></script>
+
+</body>
+</html>

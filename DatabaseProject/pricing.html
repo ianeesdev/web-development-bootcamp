@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <link rel="stylesheet" href = "pricing.css">
+    <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --primary-color: #e50914;
+            --dark-color: #141414;
+            --light-color: #f4f4f4;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            background: #000;
+            color: #999;
+            margin: 40px;
+        }
+
+        .showcase-top img{
+            width: 140px;
+            position: absolute;
+            top: 7%;
+            left: -23px;
+            transform: translate(40% , -50%);
+        }
+
+        .showcase-top{
+            margin: 87px -30px 80px -30px;
+            border-bottom: 0.05px rgb(66, 62, 62) solid;
+        }
+
+        /* Text Styles */
+        .text-lg {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            line-height: -12px;
+        }
+
+        .text-lg p{
+            color: rgb(206, 194, 194);
+            margin-bottom: 6rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Buttons */
+        .btn {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 0.4rem 1.3rem;
+            font-size: 1rem;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            border-radius: 2px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-rounded {
+            border-radius: 5px;
+        }
+
+        .btn-lg {
+            font-size: 1rem;
+            padding: 0.8rem 1.3rem;
+            position: absolute;
+            top: 285px;
+        }
+
+        .btn1{
+            right: 470px;
+        }
+
+        .btn2{
+            right: 270px;
+        }
+
+        .btn3{
+            right: 90px;
+        }
+        /* Tabs */
+        .tabs {
+            background: var(--dark-color);
+            padding-top: 1rem;
+            border-bottom: 3px solid #3d3d3d;
+            border-right: none;
+        }
+
+        .tabs p {
+            font-size: 1.2rem;
+            padding-top: 0.5rem;
+        }
+
+        .tabs .container{
+            border-top: 100px rgb(255, 253, 253) solid;
+        }
+
+        .tabs .container > div:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            background: #000;
+            color: #fff;
+        }
+
+        .table {
+            width: 100%;
+            margin-top: 3rem;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .table thead th {
+            text-transform: uppercase;
+            padding: 0.8rem;
+        }
+
+        .table tbody {
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+
+        .table tbody tr td {
+            color: #999;
+            padding: 0.8rem 1.2rem;
+            text-align: center;
+        }
+
+        .table tbody tr td:first-child {
+            text-align: left;
+        }
+
+        .table tbody tr:nth-child(odd) {
+            background: #222;
+        }
+    </style>
+</head>
+<body>
+    <div class="showcase-top">
+        <img src="logo.png" alt="Netflix Logo">
+    </div>
+    <section class="tab-content">
+        <div class="container">
+            <!-- Tab Content 3 -->
+            <div id="tab-3-content" class="tab-content-item">
+                <div class="text-center">
+                    <div class="text-lg">
+                        <h1>Our Pricing</h3>
+                        <p>Choose one plan and watch everything on Netflix.</p>
+                    </div>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="btn btn-lg btn1">Basic</th>
+                            <th class="btn btn-lg btn2">Standard</th>
+                            <th class="btn btn-lg btn3">Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monthly price</td>
+                            <td>Rs. 450</td>
+                            <td>Rs. 800</td>
+                            <td>Rs. 1500</td>
+                        </tr>
+                        <tr>
+                            <td>HD Available</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Recommendations for you</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Screens you can watch on at the same time</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Watch on your laptop, TV, phone and tablet</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Unlimited movies and TV shows</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Cancel anytime</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>First month free</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

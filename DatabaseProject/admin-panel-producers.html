@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">    
+    <link rel="stylesheet" href="admin-panel-table.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <!-- Logo + name -->
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                    <h2>EGA<span class="danger">TOR</span></h2>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <!-- Dashboard -->
+                <a href="admin-panel-dashboard.html"><span class="material-symbols-sharp">grid_view</span><h3>Dashboard</h3></a>
+                
+                <!-- Profile -->
+                <a href="admin-panel-profile.html" ><span class="material-symbols-sharp">person</span><h3>Profile</h3></a>
+
+                <!-- Adminss -->
+                <a href="admin-panel-admin.html" ><span class="material-symbols-sharp">verified_user</span><h3>Admins</h3></a>
+                
+                <!-- Customers -->
+                <a href="admin-panel-customers.html" ><span class="material-symbols-sharp">group</span><h3>Customers</h3></a>
+                
+                <!-- Subscriptions -->
+                <a href="admin-panel-subscribers.html"><span class="material-symbols-sharp">subscriptions</span><h3>Subscriptions</h3></a>
+                
+                <!-- Actors -->
+                <a href="admin-panel-actors.html"><span class="material-symbols-sharp">theater_comedy</span><h3>Actors</h3></a>
+
+                <!-- Producers -->
+                <a href="" class = "active"><span class="material-symbols-sharp">video_camera_front</span><h3>Producers</h3></a>
+
+                <!-- Directors -->
+                <a href="admin-panel-directors.html"><span class="material-symbols-sharp">videocam</span><h3>Directors</h3></a>
+                
+                <!-- Videos -->
+                <a href="admin-panel-videos.html"><span class="material-symbols-sharp">theaters</span><h3>Videos</h3></a>
+                
+                <!-- Video Requests -->                  
+                <a href="admin-panel-requests.html">
+                    <span class="material-symbols-sharp">mail</span>
+                    <h3>Requests</h3>
+                    <span class="request-count">23</span>
+                </a>
+                <!-- Customer Feedbacks -->
+                <a href="admin-panel-feedbacks.html"><span class="material-symbols-sharp">reviews</span><h3>Feedbacks</h3></a>
+
+                <!-- Profile Settings -->                
+                <a href="admin-panel-settings.html"><span class="material-symbols-sharp">settings</span><h3>Settings</h3></a>
+                
+                <!-- Log Out -->
+                <a href="landing-page.html"><span class="material-symbols-sharp">logout</span><h3>Log Out</h3></a>
+            </div>
+        </aside>
+
+        <!-- --------------------- END OF ASIDE ---------------------------- -->
+        <main>
+            <h1>Customers</h1>
+            <div class="top">
+                <div class="filters">
+                    <h2 onclick="">Filters</h2>
+                    <span class="material-symbols-sharp">arrow_drop_down</span>
+                </div>
+                <div class="pagination">
+                    <span class="material-symbols-sharp">navigate_before</span>
+                    <h2>Page 1</h2>
+                    <span class="material-symbols-sharp">navigate_next</span>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                    <span class="material-symbols-sharp">search</span>
+                </div>
+            </div>
+            
+            <div class="sub">
+
+            </div>
+
+            <div class="table-data">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Worldwide Box Office</th>
+                            <th>Movies</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kevin Feige</td>
+                            <td>Male</td>
+                            <td>$26,538,611,377	</td>
+                            <td>33</td>
+                            <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
+                        </tr>
+                        <tr>
+                            <td>Kathleen Kennedy</td>
+                            <td>Female</td>
+                            <td>$12,896,123,116	</td>
+                            <td>35</td>
+                            <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
+                        </tr>
+                        <tr>
+                            <td>David Heyman</td>
+                            <td>Male</td>
+                            <td>$11,903,117,659	</td>
+                            <td>29</td>
+                            <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
+                        </tr>
+                        <tr>
+                            <td>Neal H. Moritz</td>
+                            <td>Male</td>
+                            <td>$11,239,680,212	</td>
+                            <td>24</td>
+                            <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
+                        </tr>
+                        <tr>
+                            <td>Jerry Bruckheimer</td>
+                            <td>Male</td>
+                            <td>$11,022,207,492	</td>
+                            <td>54</td>
+                            <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
+                        </tr>
+                        <tr>
+                            <td>Frank Marshall</td>
+                            <td>Male</td>
+                            <td>$9,429,718,084	</td>
+                            <td>39</td>
+                            <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>      
+        <!------------------------------ END OF MAIN ------------------------->
+    </div>
+
+    <script src="admin-panel-producers.js"></script>
+</body>
+</html>
