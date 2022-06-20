@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">    
-    <link rel="stylesheet" href="customer-panel-profile.css">
+    <link rel="stylesheet" href="admin-panel-table.css">
     <title>Admin Panel</title>
     <style>
-        /* ===== Google Font Import - Poformsins ===== */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
         /* ----------------- ROOT VARIABLES --------------------- */
@@ -34,7 +33,7 @@
             --card-padding: 1.8rem;
             --padding-1: 1.2rem;
 
-            --box-shadow: 0 1.3rem 2.3rem var(--color-light);
+            --box-shadow: 0 2rem 3rem var(--color-light);
         }
 
 
@@ -96,10 +95,6 @@
         }
 
         h4{
-            font-size: 0.8rem;
-        }
-
-        h5{
             font-size: 0.77rem;
         }
 
@@ -243,113 +238,98 @@
 
         /* -------------------- MAIN--------------------------- */
         main{
-            margin-top: 3rem;
-        }
-
-        main .profile-info{
-            margin-top: 3rem;
-            display: flex;
-            gap: 2rem;
-        }
-
-        main .pic-btn{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 1rem;
-        }
-
-        main .pic-btn button, main .profile-btn button{
+            margin-top: 3.4rem;
             
+        }
+
+        main .top{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        main .top div{
+            margin-top: 1rem;
+            margin-right: 25px;
+            display: flex;
             background-color: var(--color-info-light);
             color:  #2c3336;
-            border-radius: 0.2rem;
+            border-radius: 0.5rem;
         }
 
-        main .pic-btn button{
-            margin: 0.6rem 0.6rem 0 0;
-            padding: 0.3rem 1rem 0.3rem 1rem;
+        main .top h2{
+            font-size: 1rem;
+            font-weight: 15;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 3px;
         }
 
-        main .profile-btn button{
-            justify-content: right;
-            margin-top: 1rem;
-            margin-left: 1.5rem;
-            padding: 0.3rem 1rem 0.3rem 1rem;
+        main .filters .pagination .search span{
+            margin-top: 5px;
         }
 
-        main .profile-info button:hover{
-            background-color: #3d4447;
+        main .pagination{
+            margin-left: 80px;
+        }
+
+        main .search ::placeholder{
+            padding-left: 10px;
+            font-size: 1rem;
+            font-weight: 15;
+            color:  #2c3336;
+        }
+
+
+        main .search span{
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+            padding-right: 0.6rem;
+        }
+
+        main .search input {
+            width: 10rem;
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+            padding-left: 1rem;
+            background-color: var(--color-info-light);
+            border-radius: 0.5rem;
+            color: #2c3336;
+        }
+
+        main .filters:hover{
+            background-color: var(--color-white);
             color: var(--color-info-light);
         }
 
-        #profile-container {
-            width: 16.3rem;
-            height: 16.3rem;
-            margin: auto;
+        /* -------------------- TABLE --------------------------- */
+        main .table-data{
+            margin-top: 2rem;
+            margin-right: 20px;
         }
 
-        /* Create two equal columns that floats next to each other */
-        main .profile-pic, main .general-info, main .sub-details {    
+        main .table-data table{
             background: var(--color-white);
-            padding: var(--card-padding);
+            width: 100%;
             border-radius: var(--card-border-radius);
-            margin-top: 1rem;
+            padding: var(--card-padding);
+            text-align: center;
             box-shadow: var(--box-shadow);
             transition: all 300ms ease;
-            
         }
 
-        main .sub-info{
-            margin-top: 2rem;
-            padding-right: 1.8rem;
-        }
-
-        main .profile-pic{
-            width: 60%;
-        }
-
-        main .general-info{
-            width: 100%;
-        }
-        
-        /* Clear floats after the columns */
-        .profile-info:after {
-            content: "";
-            display: table;
-            clear: both;
-        }  
-
-        main .profile-info > div:hover, main .sub-info > div:hover{
+        main .table-data table:hover{
             box-shadow: none;
         }
 
-        main .profile-info h3, main .sub-info h3{
-            margin: 1rem 0 0.6rem;
-            font-size: 1.5rem;
+        main table tbody td{
+            height: 2.8rem;
+            border-bottom: 1px solid var(--color-light);
+            color: rgb(197, 209, 216);
         }
 
-        main table{
-            border-collapse: separate;
-            border-spacing: 0.5rem;
+        main table tbody td:last-child{
+            border: none;
         }
-
-        main table td{
-            font-size: 1rem; 
-        }
-
-        main table td:first-child{
-            font-weight: 600;
-            padding-left: 1rem;
-            padding-right: 4rem;
-        }
-
-        main table td:nth-child(2){
-            background-color: #464b4e;
-            padding: 0.2rem 2rem 0.5rem 2rem;
-            margin-top: 0.5rem; 
-            border-radius: 0.7rem;
-        } 
     </style>
 </head>
 <body>
@@ -365,140 +345,133 @@
 
             <div class="sidebar">
                 <!-- Dashboard -->
-                <a href="admin-panel-dashboard.html" ><span class="material-symbols-sharp">grid_view</span><h3>Dashboard</h3></a>
+                <a href="admin-panel-dashboard.html"><span class="material-symbols-sharp">grid_view</span><h3>Dashboard</h3></a>
                 
                 <!-- Profile -->
-                <a href="" class = "active"><span class="material-symbols-sharp">person</span><h3>Profile</h3></a>
+                <a href="admin-panel-profile.html" ><span class="material-symbols-sharp">person</span><h3>Profile</h3></a>
 
                 <!-- Adminss -->
-                <a href="admin-panel-admin.html"><span class="material-symbols-sharp">verified_user</span><h3>Admins</h3></a>
+                <a href="admin-panel-admin.html" ><span class="material-symbols-sharp">verified_user</span><h3>Admins</h3></a>
                 
                 <!-- Customers -->
-                <a href="admin-panel-customers.html">
-                    <span class="material-symbols-sharp">group</span>
-                    <h3>Customers</h3>
-                </a>
+                <a href="admin-panel-customers.html" ><span class="material-symbols-sharp">group</span><h3>Customers</h3></a>
                 
                 <!-- Subscriptions -->
                 <a href="admin-panel-subscribers.html"><span class="material-symbols-sharp">subscriptions</span><h3>Subscriptions</h3></a>
                 
+                <!-- Actors -->
+                <a href="admin-panel-actors.html"><span class="material-symbols-sharp">theater_comedy</span><h3>Actors</h3></a>
+
+                <!-- Producers -->
+                <a href="" class = "active"><span class="material-symbols-sharp">video_camera_front</span><h3>Producers</h3></a>
+
+                <!-- Directors -->
+                <a href="admin-panel-directors.html"><span class="material-symbols-sharp">videocam</span><h3>Directors</h3></a>
+                
                 <!-- Videos -->
-                <a href=""><span class="material-symbols-sharp">videocam</span><h3>Videos</h3></a>
+                <a href="admin-panel-videos.html"><span class="material-symbols-sharp">theaters</span><h3>Videos</h3></a>
                 
                 <!-- Video Requests -->                  
-                <a href="">
+                <a href="admin-panel-requests.html">
                     <span class="material-symbols-sharp">mail</span>
                     <h3>Requests</h3>
                     <span class="request-count">23</span>
                 </a>
                 <!-- Customer Feedbacks -->
-                <a href=""><span class="material-symbols-sharp">reviews</span><h3>Feedbacks</h3></a>
+                <a href="admin-panel-feedbacks.html"><span class="material-symbols-sharp">reviews</span><h3>Feedbacks</h3></a>
 
                 <!-- Profile Settings -->                
-                <a href=""><span class="material-symbols-sharp">settings</span><h3>Settings</h3></a>
+                <a href="admin-panel-settings.html"><span class="material-symbols-sharp">settings</span><h3>Settings</h3></a>
                 
                 <!-- Log Out -->
-                <a href=""><span class="material-symbols-sharp">logout</span><h3>Log Out</h3></a>
+                <a href="landing-page.html"><span class="material-symbols-sharp">logout</span><h3>Log Out</h3></a>
             </div>
         </aside>
 
         <!-- --------------------- END OF ASIDE ---------------------------- -->
         <main>
-            <h1>Profile Information</h1> 
+            <h1>Customers</h1>
+            <div class="top">
+                <div class="filters">
+                    <h2 onclick="">Filters</h2>
+                    <span class="material-symbols-sharp">arrow_drop_down</span>
+                </div>
+                <div class="pagination">
+                    <span class="material-symbols-sharp">navigate_before</span>
+                    <h2>Page 1</h2>
+                    <span class="material-symbols-sharp">navigate_next</span>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                    <span class="material-symbols-sharp">search</span>
+                </div>
+            </div>
+            
+            <div class="sub">
 
-            <div class="profile-info">
-                <div class="profile-pic">
-                    <h3>Profile Pic</h3>
-                    <div id="profile-container">
-                        <img src="profile-pic.png" alt="">
-                    </div>
-                    <div class="pic-btn">
-                        <div class="change-btn">
-                            <button>Change Picture</button>
-                        </div>
-                        <div class="remove-btn">
-                            <button>Remove Picture</button>
-                        </div>
-                    </div>
-                 </div>
-                <div class="general-info">
-                    <h3>General Information</h3>
-                    <table>
+            </div>
+
+            <div class="table-data">
+                <table>
+                    <thead>
                         <tr>
-                            <td>Name</td>
-                            <td>Eesha Shahid</td>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Worldwide Box Office</th>
+                            <th>Movies</th>
+                            <th>Action</th>
                         </tr>
-                        
+                    </thead>
+                    <tbody>
                         <tr>
-                            <td>Password</td>
-                            <td>eesha123</td>
+                            <td>Kevin Feige</td>
+                            <td>Male</td>
+                            <td>$26,538,611,377	</td>
+                            <td>33</td>
+                            <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
                         </tr>
                         <tr>
-                            <td>Email Address</td>
-                            <td>eesha.shahid14@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td>Contact</td>
-                            <td>0333-8177827</td>
-                        </tr>
-                        <tr>
-                            <td>Gender</td>
+                            <td>Kathleen Kennedy</td>
                             <td>Female</td>
+                            <td>$12,896,123,116	</td>
+                            <td>35</td>
+                            <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
                         </tr>
                         <tr>
-                            <td>Date of Birth</td>
-                            <td>14-09-01</td>
+                            <td>David Heyman</td>
+                            <td>Male</td>
+                            <td>$11,903,117,659	</td>
+                            <td>29</td>
+                            <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
                         </tr>
-                    </table>
-                    <div class="profile-btn">
-                        <button>Update Information</button>
-                    </div>
-                </div>
+                        <tr>
+                            <td>Neal H. Moritz</td>
+                            <td>Male</td>
+                            <td>$11,239,680,212	</td>
+                            <td>24</td>
+                            <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
+                        </tr>
+                        <tr>
+                            <td>Jerry Bruckheimer</td>
+                            <td>Male</td>
+                            <td>$11,022,207,492	</td>
+                            <td>54</td>
+                            <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
+                        </tr>
+                        <tr>
+                            <td>Frank Marshall</td>
+                            <td>Male</td>
+                            <td>$9,429,718,084	</td>
+                            <td>39</td>
+                            <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
-            <div class="sub-info">
-                <div class="sub-details">
-                    <h3>Subscription Information</h3>
-                    <table>
-                        <tr>
-                            <td>Package</td>
-                            <td>Premium</td>
-                        </tr>
-                        <tr>
-                            <td>Expiration Date</td>
-                            <td>2-06-22</td>
-                        </tr>
-                        <tr>
-                            <td>Card number</td>
-                            <td>1234 5678 9101 2131</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>Card Holder</td>
-                            <td>Eesha Shahid</td>
-                        </tr>
-                        <tr>
-                            <td>Expiration Month</td>
-                            <td>September</td>
-                        </tr>
-                        <tr>
-                            <td>Expiration Year</td>
-                            <td>2025</td>
-                        </tr>
-                        <tr>
-                            <td>CVV</td>
-                            <td>728</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <!------------------------END OF INSIGHTS ------------------------>
-        </main>                  
-        </div>
+        </main>      
         <!------------------------------ END OF MAIN ------------------------->
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="customer-panel-profile.js"></script>
+    <script src="admin-panel-producers.js"></script>
 </body>
 </html>

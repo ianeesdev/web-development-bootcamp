@@ -1,0 +1,393 @@
+/* ===== Google Font Import - Poformsins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ----------------- ROOT VARIABLES --------------------- */
+:root{
+    --color-primary: #731c2199;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #202528;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #edeffd;
+    --color-light: rgba(0,0,0,0.4);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #a3bdcc;
+    --color-background: #181a1e;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+    --letter-space: 0.1em;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.8rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 16rem 76rem;
+}
+
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-size: 1.4rem;
+}
+
+h3{
+    font-size: 0.87rem;
+}
+
+h4{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.danger{
+    color: var(--color-danger);
+}
+
+.success{
+    color: var(--color-success);
+}
+
+.warning{
+    color: var(--color-warning);
+}
+
+aside{
+    height: 100vh;
+}
+
+aside .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .logo{
+    margin-left: 1.8rem;
+    display: flex;
+    gap: 0.8rem;
+}
+
+aside .logo img{
+    width: 2.3rem;
+    height: 2.3rem;
+    color: #298811;
+}
+
+aside .logo h2{
+    font-size: 2rem;
+}
+
+/* ----------------------- SIDEBAR ------------------------ */
+aside{
+    padding-left: 1.9rem;
+}
+
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+
+/* All panel options */
+aside h3{
+    font-weight: 500;
+}
+
+aside .active h3{
+    color: #dcd3d3;
+}
+
+/* Each panel option */
+aside .sidebar a{
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 2.7rem;
+    transition: all 300ms ease;
+}
+
+/* Heading of the panel option */
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+/* Heading of the panel option if hover */
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+}
+
+/* Logout option */
+aside .sidebar a:last-child{
+    position: absolute;
+    top: 35rem;
+    width: 100%;
+} 
+
+/* Option if clicked */
+aside .sidebar a.active{
+    background: var(--color-primary);
+    color: var(--color-light);
+    margin-left: 0;
+}
+
+/* Line with the clicked option */
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: #900f16;
+}
+
+/* Icon in the clicked element */
+aside .sidebar a.active span{
+    color: #dcd3d3;
+    margin-left: calc(1rem - 3px);
+}
+
+/* Option if hover */
+aside .sidebar a:hover{
+    color: #dcd3d3;
+}
+
+aside .sidebar .request-count{
+    background: var(--color-danger);
+    color: var(--color-dark);
+    padding: 2px 10px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+/* -------------------- MAIN--------------------------- */
+
+.main{
+    margin-left: -1.6rem;
+}
+
+.featured{
+    
+    background-repeat: no-repeat;
+    height: 50vh;
+    padding: 2.5rem;
+    padding-bottom: 24rem;
+}
+
+.featured img{
+    width: 20%;
+}
+
+.featured-desc{
+    width: 28%;
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+.featured-desc p{
+    color: lightgray;
+}
+
+.featured-btn button{
+    background-color: rgba(0, 0, 0, 0.418);  
+    backdrop-filter: blur(5px);
+    padding: 0.4rem 2rem;
+    border-radius: 5px;
+    color: white;
+    font: bold;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+/* ----------------------Movie List-------------------------- */
+
+.movie-list-container{
+    padding: 0.8rem;
+}
+
+.title{
+    background-color: #731c2199;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    position: relative;
+}
+
+.title span{
+    margin-left: 2rem;
+}
+
+.wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list{
+    display: flex;
+    align-items: center;
+    height: 16rem;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movie-list .item{
+    margin-right: 2.5rem;
+    position: relative;
+}
+
+.item:hover .item-img{
+    transform: scale(1.1);
+    transition: all 1s ease-in-out;
+    backdrop-filter: blur(5px);
+    filter: blur(2px);
+    transition: 0.5s ease;
+}
+
+.item:hover .item-title,
+.item:hover .item-desc,
+.item:hover .item-btn button{
+    opacity: 1;
+}
+
+.movie-list img{
+    width: 240px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item-title, .item-desc{
+    position: absolute;
+    left: 5px;
+    background-color: #2e2f30c9;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
+
+.item-title{
+    padding: 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    top: 10%;
+}
+
+.item-desc{
+    padding: 15px;
+    font-size: 0.8rem;
+    top: 30%;
+    text-align: justify;
+}
+
+.item-title span,.item-desc p{
+    color: #ffffffc2;
+}
+
+.item-btn button{
+    background-color: #731c20ea;
+    padding: 0.4rem 2rem;
+    border-radius: 5px;
+    color: white;
+    font: bold;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
+
+.title .arrow{
+    font-size: 20px;
+    position: absolute;
+    top: 6px;
+    right:45px;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+}

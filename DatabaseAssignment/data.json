@@ -1,0 +1,8 @@
+{
+    "relation": "A,B,C,D,E,F",
+    "FDs": {
+        "A" : "B",
+        "D" : "F,A",
+        "B" : "C,D"
+    }
+}

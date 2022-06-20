@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">      
+    <link rel="stylesheet" href="/user-panel/Others/user-panel-others.css">
+    <link rel="icon" href="/other-images/logo.png" type="image/icon type">
+    <title>Others</title>
+    <style>
+        /* ===== Google Font Import - Poformsins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ----------------- ROOT VARIABLES --------------------- */
+:root{
+    --color-primary: #731c2199;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #202528;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #edeffd;
+    --color-light: rgba(0,0,0,0.4);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #a3bdcc;
+    --color-background: #181a1e;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+    --letter-space: 0.1em;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.8rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 16rem 76rem;
+}
+
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-size: 1.4rem;
+}
+
+h3{
+    font-size: 0.87rem;
+}
+
+h4{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.danger{
+    color: var(--color-danger);
+}
+
+.success{
+    color: var(--color-success);
+}
+
+.warning{
+    color: var(--color-warning);
+}
+
+aside{
+    height: 100vh;
+}
+
+aside .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .logo{
+    margin-left: 1.8rem;
+    display: flex;
+    gap: 0.8rem;
+}
+
+aside .logo img{
+    width: 2.3rem;
+    height: 2.3rem;
+    color: #298811;
+}
+
+aside .logo h2{
+    font-size: 2rem;
+}
+
+/* ----------------------- SIDEBAR ------------------------ */
+aside{
+    padding-left: 1.9rem;
+}
+
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+
+/* All panel options */
+aside h3{
+    font-weight: 500;
+}
+
+aside .active h3{
+    color: #dcd3d3;
+}
+
+/* Each panel option */
+aside .sidebar a{
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 2.7rem;
+    transition: all 300ms ease;
+}
+
+/* Heading of the panel option */
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+/* Heading of the panel option if hover */
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+}
+
+/* Logout option */
+aside .sidebar a:last-child{
+    position: absolute;
+    top: 35rem;
+    width: 100%;
+} 
+
+/* Option if clicked */
+aside .sidebar a.active{
+    background: var(--color-primary);
+    color: var(--color-light);
+    margin-left: 0;
+}
+
+/* Line with the clicked option */
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: #900f16;
+}
+
+/* Icon in the clicked element */
+aside .sidebar a.active span{
+    color: #dcd3d3;
+    margin-left: calc(1rem - 3px);
+}
+
+/* Option if hover */
+aside .sidebar a:hover{
+    color: #dcd3d3;
+}
+
+aside .sidebar .request-count{
+    background: var(--color-danger);
+    color: var(--color-dark);
+    padding: 2px 10px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+/* -------------------- MAIN--------------------------- */
+
+.main{
+    margin-left: -1.6rem;
+}
+
+/* Accordion */
+h1 {
+    margin: 2rem 0;
+    font-size: 2.5rem;
+  }
+  
+  .feedback span{
+    font-size: 1.2rem;
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    padding: 0.3rem 1.5rem;
+    border-radius: 5px;
+  }
+
+  .feedback span:hover{
+    background-color: #6d0d1299;
+    cursor: pointer;
+  }
+
+  .accordion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem 0;
+  }
+  .accordion-item {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  }
+  .accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .accordion-item-header:hover{
+    background-color: #6d0d1299;
+  }
+
+  .accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+  }
+  .accordion-item-header.active::after {
+    content: "\2212";
+  }
+  .accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid #edeffd38;
+  }
+  
+  @media(max-width:767px) {
+    html {
+      font-size: 14px;
+    }
+  }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <!-- Logo + name -->
+                <div class="logo">
+                    <img src="/other-images/logo.png" alt="">
+                    <h2>AE<span style="color: #df1e24;">Flix</span></h2>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <!-- Home -->
+                <a href="/user-panel/Home/user-panel-home.html"><span class="material-icons">home</span><h3>Home</h3></a>
+
+                <!-- Profile -->
+                <a href="/user-panel/Profile/user-panel-profile.html" ><span class="material-icons" >person</span><h3>Your Profile</h3></a>
+ 
+                <!-- Subscriptions -->
+                <a href="/user-panel/Subscriptions/user-panel-subscriptions.html" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
+ 
+                <!-- Search Videos -->
+                <a href="/user-panel/Search Videos/user-panel-search.html" ><span class="material-icons">search</span><h3>Search Videos</h3></a>
+ 
+                <!-- Request Videos -->
+                <a href="/user-panel/Request Videos/user-panel-request.html"><span class="material-icons">mail</span><h3>Request Videos</h3></a>
+ 
+                <!-- Playlist -->
+                <a href="/user-panel/Lists/user-panel-list.html" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
+ 
+                <!-- Others-->
+                <a href="" class="active"><span class="material-icons">contact_support</span><h3>Others</h3></a>
+ 
+                <!-- Log Out -->
+                <a href="/same-panels/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            
+            </div>
+        </aside>
+
+        <!-- --------------------- END OF ASIDE ---------------------------- -->
+        <main>
+            <h1>Feedback</h1>
+            <div class="feedback">
+                <span>Send a feedback</span>
+            </div>
+            <h1>FAQ</h1>
+            <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                What is AEFlix?
+                </div>
+                <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    AEFlix is the world’s leading subscription service for watching TV episodes and movies. It allows subscribers to gain access to unlimited TV shows and movies anytime, anywhere.
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                What devices can I use to stream AEFlix?
+                </div>
+                <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    You can stream videos from any Internet-connected device. You can watch it on streaming media players, smart TVs, game consoles, set-top boxes, Blu-ray players, smartphones, tablets, PCs, and laptops.
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                What plans and pricing do we offer?
+                </div>
+                <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Netflix offers a variety of plans to meet your needs. The plan you choose will determine the expiry date.
+                    <ul style="padding-left: 1rem;">
+                    <li>&#8226;   Basic for Rs.450 Weekly.</li>
+                    <li>&#8226;   Standard for Rs.800 Monthly</li>
+                    <li>&#8226;   Premium for Rs.1500 Annually</li>
+                    </ul>
+                </div>
+                </div>
+        </main>                  
+        <!------------------------------ END OF MAIN ------------------------->
+    </div>
+
+    <script src="users-panel-others.js"></script>
+</body>
+</html>
