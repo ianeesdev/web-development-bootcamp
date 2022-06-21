@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">    
-    <link rel="stylesheet" href="/same-panels/panel-profile.css">
+    <link rel="stylesheet" href="panel-profile.css">
     <title>Admin Panel
     </title>
 </head>
@@ -15,7 +15,7 @@
             <div class="top">
                 <!-- Logo + name -->
                 <div class="logo">
-                    <img src="other-images/logo.png" alt="">
+                    <img src="logo.png" alt="">
                     <h2>EGA<span class="danger">TOR</span></h2>
                 </div>
             </div>
@@ -39,32 +39,23 @@
                 <!-- Subscriptions -->
                 <a href="admin-panel-subscribers.html"><span class="material-symbols-sharp">subscriptions</span><h3>Subscriptions</h3></a>
                 
-                <!-- Actors -->
-                <a href="admin-panel-actors.html"><span class="material-symbols-sharp">theater_comedy</span><h3>Actors</h3></a>
-
-                <!-- Producers -->
-                <a href="admin-panel-producers.html"><span class="material-symbols-sharp">video_camera_front</span><h3>Producers</h3></a>
-
-                <!-- Directors -->
-                <a href="admin-panel-directors.html"><span class="material-symbols-sharp">videocam</span><h3>Directors</h3></a>
-                
                 <!-- Videos -->
-                <a href="admin-panel-videos.html"><span class="material-symbols-sharp">theaters</span><h3>Videos</h3></a>
+                <a href=""><span class="material-symbols-sharp">videocam</span><h3>Videos</h3></a>
                 
                 <!-- Video Requests -->                  
-                <a href="admin-panel-requests.html">
+                <a href="">
                     <span class="material-symbols-sharp">mail</span>
                     <h3>Requests</h3>
                     <span class="request-count">23</span>
                 </a>
                 <!-- Customer Feedbacks -->
-                <a href="admin-panel-feedbacks.html"><span class="material-symbols-sharp">reviews</span><h3>Feedbacks</h3></a>
+                <a href=""><span class="material-symbols-sharp">reviews</span><h3>Feedbacks</h3></a>
 
                 <!-- Profile Settings -->                
-                <a href="admin-panel-settings.html"><span class="material-symbols-sharp">settings</span><h3>Settings</h3></a>
+                <a href=""><span class="material-symbols-sharp">settings</span><h3>Settings</h3></a>
                 
                 <!-- Log Out -->
-                <a href="landing-page.html"><span class="material-symbols-sharp">logout</span><h3>Log Out</h3></a>
+                <a href=""><span class="material-symbols-sharp">logout</span><h3>Log Out</h3></a>
             </div>
         </aside>
 
@@ -74,9 +65,9 @@
 
             <div class="profile-info">
                 <div class="profile-pic">
-                    <h3>Profile Picture</h3>
+                    <h3>Profile Pic</h3>
                     <div id="profile-container">
-                        <img src="/other-images/profile-pic.png" alt="">
+                        <img src="profile-pic.png" alt="">
                     </div>
                     <div class="pic-btn">
                         <div class="change-btn">
@@ -121,6 +112,43 @@
                     </div>
                 </div>
             </div>
+
+            <div class="sub-info">
+                <div class="sub-details">
+                    <h3>Subscription Information</h3>
+                    <table>
+                        <tr>
+                            <td>Package</td>
+                            <td>Premium</td>
+                        </tr>
+                        <tr>
+                            <td>Expiration Date</td>
+                            <td>2-06-22</td>
+                        </tr>
+                        <tr>
+                            <td>Card number</td>
+                            <td>1234 5678 9101 2131</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Card Holder</td>
+                            <td>Eesha Shahid</td>
+                        </tr>
+                        <tr>
+                            <td>Expiration Month</td>
+                            <td>September</td>
+                        </tr>
+                        <tr>
+                            <td>Expiration Year</td>
+                            <td>2025</td>
+                        </tr>
+                        <tr>
+                            <td>CVV</td>
+                            <td>728</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
             <!------------------------END OF INSIGHTS ------------------------>
         </main>                  
         </div>
@@ -128,6 +156,6 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="admin-panel-profile.js"></script>
+    <script src="customer-panel-profile.js"></script>
 </body>
 </html>

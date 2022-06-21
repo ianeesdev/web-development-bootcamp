@@ -24,7 +24,6 @@ const container = document.querySelector(".container"),
             }) 
         })
     })
-`z`
     // document.getElementById("loginBtn").addEventListener("click", myFunction);
     //   function myFunction() {
     //     window.location.href="sub";
