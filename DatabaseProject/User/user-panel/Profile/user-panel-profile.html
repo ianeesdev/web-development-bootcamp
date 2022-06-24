@@ -15,35 +15,32 @@
             <div class="top">
                 <!-- Logo + name -->
                 <div class="logo">
-                    <img src="User/other-images/logo.png" alt="">
+                    <img src="/other-images/logo.png" alt="">
                     <h2>AE<span style="color: #df1e24;">Flix</span></h2>
                 </div>
             </div>
 
             <div class="sidebar">
-                <!-- Home -->
-                <a href="/user-panel-home.html"><span class="material-icons">home</span><h3>Home</h3></a>
-
                 <!-- Profile -->
-                <a href="/user-panel-profile.html" class="active"><span class="material-icons" >person</span><h3>Your Profile</h3></a>
+                <a href="" class="active"><span class="material-icons" >person</span><h3>Your Profile</h3></a>
  
                 <!-- Subscriptions -->
-                <a href="/user-panel-subscriptions.html" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
+                <a href="user-panel-subscriptions.html" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
  
                 <!-- Search Videos -->
-                <a href="/user-panel-search.html" ><span class="material-icons">search</span><h3>Search Videos</h3></a>
+                <a href="user-panel-search.html" ><span class="material-icons">search</span><h3>Search Videos</h3></a>
  
                 <!-- Request Videos -->
-                <a href="/user-panel-request.html" ><span class="material-icons">mail</span><h3>Request Videos</h3></a>
+                <a href="user-panel-request.html" ><span class="material-icons">mail</span><h3>Request Videos</h3></a>
  
                 <!-- Playlist -->
-                <a href="/user-panel-list.html" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
+                <a href="user-panel-list.html" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
  
                 <!-- Others-->
-                <a href="/user-panel-others.html" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
+                <a href="user-panel-others.html" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
  
                 <!-- Log Out -->
-                <a href="/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            
+                <a href="/same-panels/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            
             </div>
         </aside>
 
@@ -55,17 +52,54 @@
                 <div class="profile-pic">
                     <h3>Profile Picture</h3>
                     <div id="profile-container">
-                        <img src="User/other-images/profile-pic.png" alt="">
+                        <img src="/other-images/profile-pic.png" alt="">
                     </div>
                     <div class="pic-btn">
                         <div class="change-btn">
-                            <button>Change Picture</button>
+                            <a href="#change-pic"><span>Change Picture</span></a>                        
                         </div>
                         <div class="remove-btn">
-                            <button>Remove Picture</button>
+                            <a href="#remove-pic"><span>Remove Picture</span></a>                        
                         </div>
                     </div>
                  </div>
+
+                 <!-- Change picture -->
+                <div class="popup" id="change-pic">
+                    <div class="wrapper">
+                        <h2>CHANGING PICTURE</h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            <div class="content-container">
+                                <form>
+                                    <div class="new-profile">
+                                        <label>Your Profile Picture</label>
+                                        <div id="display-image"></div>
+                                        <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+                                    </div>                                         
+                                    <input type="submit" value="Save Changes">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Confirmation popup  -->
+                <div class="popup" id="remove-pic">
+                    <div class="wrapper">
+                        <h2>REMOVING PROFILE PICTURE</h2>
+                        <div class="content">
+                            <div class="content-container">
+                                <span>Are you sure you want to remove your profile picture?</span>
+                                <div class="confirmation">
+                                    <a href="" id="yes">Yes</a>
+                                    <a href="" id="no">No</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="general-info">
                     <h3>General Information</h3>
                     <table>
@@ -96,7 +130,57 @@
                         </tr>
                     </table>
                     <div class="profile-btn">
-                        <button>Update Information</button>
+                        <a href="#update-profile"><span>Update Information</span></a>
+                    </div>
+
+                    <!-- Pop up to update info  -->
+                    <div class="popup" id="update-profile">
+                        <div class="wrapper">
+                            <h2>UPDATING PROFILE</h2>
+                            <a class="close" href="#">&times;</a>
+                            <div class="content">
+                                <div class="content-container">
+                                    <form>
+                                        <div class="name">
+                                            <label>Full Name</label>
+
+                                            <!-- Current Name will be fetched and placed here -->
+                                            <input value="Eesha Shahid" type="text">
+                                        </div>
+
+                                        <div class="password">
+                                            <label>Password</label>
+
+                                            <!-- Current Name will be fetched and placed here -->
+                                            <input value="eesha123" type="text">
+                                        </div>
+
+                                        <div class="email">
+                                            <label>Email</label>
+
+                                            <!-- Current Name will be fetched and placed here -->
+                                            <input value="eesha.shahid14@gmail.com" type="text">
+                                        </div>
+
+                                        <div class="contact">
+                                            <label>Contact</label>
+
+                                            <!-- Current Name will be fetched and placed here -->
+                                            <input value="0338-111774" type="text">
+                                        </div>
+
+                                        <div class="gender">
+                                            <label>Gender</label> 
+                                            <select  id="gender-spec">
+                                                <option value="Male">Male</option>
+                                                <option selected value="Female">Female</option>
+                                            </select>
+                                        </div>                                
+                                        <input type="submit" value="Save Changes">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

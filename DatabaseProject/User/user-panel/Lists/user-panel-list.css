@@ -463,3 +463,234 @@ aside .sidebar .request-count{
     opacity: 0.5;
     cursor: pointer;
 }
+
+.playlist .head{
+    background-color: #731c2199;
+    border-radius: 5px;
+}
+
+.playlist span{
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+}
+
+/* -------------------- TABLE --------------------------- */
+.table-data{
+    margin-top: 2rem;
+    margin-right: 20px;
+}
+
+.table-data thead{
+    font-size: 1rem;
+}
+
+.table-data table{
+    background: var(--color-white);
+    width: 70%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    margin-bottom: 3.5rem;
+}
+
+.table-data .last-child{
+    width: 60%;
+}
+
+.table-data table:hover{
+    box-shadow: none;
+}
+
+table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: rgb(197, 209, 216);
+}
+
+table tbody td:last-child{
+    border: none;
+}
+
+.table-data span{
+    font-size: 0.9rem;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+}
+
+.table-data #edit{
+    background-color: rgb(12, 112, 12);
+    color: var(--color-info-light);
+}
+
+.table-data #delete{
+    background-color: rgb(151, 7, 7);
+    color: var(--color-info-light);
+}
+
+.table-data #play{
+    background-color: var(--color-info-light);
+    color: var(--color-background);
+}
+
+/* Popup */
+.popup {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.8);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.popup:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.wrapper {
+	margin: 150px auto;
+	padding: 20px;
+	background: #e7e7e7;
+	border-radius: 5px;
+	width: 40%;
+	position: relative;
+	transition: all 5s ease-in-out;
+    text-align: center;
+}
+
+.wrapper h2 {
+	margin-top: 0.7rem;
+	color: #333;
+    letter-spacing: 0.2em;
+}
+
+.wrapper .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.wrapper .close:hover {
+	color: red;
+}
+
+.wrapper .content {
+	max-height: 30%;
+}
+
+.content-container{
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: black;
+}
+
+#change-pic .wrapper{
+    margin: 100px auto;
+}
+
+#update-profile .wrapper{
+    margin: 90px auto;
+}
+
+.confirmation{
+    margin-top: 1.5rem;
+}
+
+.confirmation a{
+    padding: 0.3rem 1.5rem;
+    border-radius: 5px;
+}
+
+#yes{
+    background-color: green;
+    margin-right: 1.2rem;
+}
+
+#no{
+    background-color: red;
+}
+
+/* Popup form */
+form{
+    margin-top: 3rem;
+}
+
+form .name,form .password,form .email,form .contact, form .gender{
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+form .password input{
+    margin-left: 1.7rem;
+}
+
+form .email input{
+    margin-left: 4.1rem;
+}
+
+form .contact input{
+    margin-left: 2.5rem;
+}
+
+form .gender select{
+    margin-left: 3rem;
+}
+
+form label{
+    background-color: var(--color-white);
+    color: white;
+    letter-spacing: 0.2em;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    margin-left: 2.5rem;
+    font-size: 0.9rem;
+}
+
+form input, form select{
+    border-radius: 5px;
+    margin-left: 1.5rem;
+    width: auto;
+    padding: 0.2rem 0.8rem;
+}
+
+form select{
+    margin-left: 4.2rem;
+}
+
+form input::placeholder{
+    padding: 0.4rem 0.8rem;
+}
+
+form select option{
+    padding: 0.2rem 0.8rem;
+}
+
+form input[type="submit"]{
+    margin-top: 3rem;
+    background-color: #731c20e1;
+    color: white;
+    padding: 0.5rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+form input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #731c20;
+}
+
+form .new-profile label{
+    margin: auto;
+}

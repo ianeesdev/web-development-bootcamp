@@ -339,3 +339,111 @@ main table tbody td{
     border-bottom: 1px solid var(--color-light);
     color: rgb(197, 209, 216);
 }
+
+/* Popup */
+
+.popup {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.8);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.popup:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.wrapper {
+	margin: 150px auto;
+	padding: 20px;
+	background: #e7e7e7;
+	border-radius: 5px;
+	width: 40%;
+	position: relative;
+	transition: all 5s ease-in-out;
+    text-align: center;
+}
+
+.wrapper h2 {
+	margin-top: 0.7rem;
+	color: #333;
+    letter-spacing: 0.2em;
+}
+
+.wrapper .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.wrapper .close:hover {
+	color: red;
+}
+
+.wrapper .content {
+	max-height: 30%;
+}
+
+/* Popup form */
+form{
+    margin-top: 3rem;
+}
+
+form .name, form .gender{
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+form label{
+    background-color: var(--color-white);
+    color: white;
+    letter-spacing: 0.2em;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    margin-left: 2.5rem;
+    font-size: 0.9rem;
+}
+
+form input, form select{
+    border-radius: 5px;
+    margin-left: 1.5rem;
+    width: auto;
+    padding: 0.2rem 0.8rem;
+}
+
+form select{
+    margin-left: 4.2rem;
+}
+
+form input::placeholder{
+    padding: 0.4rem 0.8rem;
+}
+
+form select option{
+    padding: 0.2rem 0.8rem;
+}
+
+form input[type="submit"]{
+    margin-top: 3rem;
+    background-color: #731c20e1;
+    color: white;
+    padding: 0.5rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+form input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #731c20;
+}

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="icon" href="/other-images/logo.png" type="image/icon type">
+
     <title>Your Lists</title>
 </head>
 <body>
@@ -23,362 +24,225 @@
             </div>
 
             <div class="sidebar">
-                <!-- Home -->
-                <a href="/user-panel-home.html"><span class="material-icons">home</span><h3>Home</h3></a>
-
                 <!-- Profile -->
-                <a href="/user-panel-profile.html"><span class="material-icons" >person</span><h3>Your Profile</h3></a>
+                <a href="user-panel-profile.html"><span class="material-icons" >person</span><h3>Your Profile</h3></a>
  
                 <!-- Subscriptions -->
-                <a href="/user-panel-subscriptions.html" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
+                <a href="user-panel-subscriptions.html" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
  
                 <!-- Search Videos -->
-                <a href="/user-panel-search.html"><span class="material-icons">search</span><h3>Search Videos</h3></a>
+                <a href="user-panel-search.html"><span class="material-icons">search</span><h3>Search Videos</h3></a>
 
                 <!-- Request Videos -->
-                <a href="/user-panel-request.html" ><span class="material-icons">mail</span><h3>Request Videos</h3></a>
+                <a href="user-panel-request.html" ><span class="material-icons">mail</span><h3>Request Videos</h3></a>
  
                 <!-- My List -->
                 <a href="" class="active"><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
  
                 <!-- Others-->
-                <a href="/user-panel-others.html" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
+                <a href="user-panel-others.html" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
  
                 <!-- Log Out -->
-                <a href="/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            </div>
+                <a href="/same-panels/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            </div>
         </aside>
 
         <!-- --------------------- END OF ASIDE ---------------------------- -->
         <div class="main">
             <h1>Your Lists</h1>
-            <div class="movie-list-container">
-                <div class="title">
+            <div class="playlist">
+                <div class="head">
                     <span>FAVORITES</span>
-                    <i class="fa-solid fa-chevron-right arrow"></i>
                 </div>
+                <div class="table-data">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Video</th>
+                                <th>Date</th>
+                                <th class="last-child">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bird Box</td>
+                                <td>18/05/22</td>
+                                <td class="action">
+                                    <a href="#remove-fav"><span id="delete" style="cursor:pointer">Remove</span></a>
+                                    <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
+                                </td>                        
+                            </tr>
+                            <tr>
+                                <td>Red Notice</td>
+                                <td>10/05/22</td>
+                                <td class="action">
+                                    <a href="#remove-fav"><span id="delete" style="cursor:pointer">Remove</span></a>
+                                    <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
+                                </td>                        
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Confirmation popup  -->
+            <div class="popup" id="remove-fav">
                 <div class="wrapper">
-                    <div class="top">
-                        <div class="filter">
-                            <p>Filter</p>
-                            <span class="material-icons">expand_more</span>
-                        </div>
-                        <div class="search">
-                            <input type="text" placeholder="Search">
-                            <span class="material-icons">search</span>
-                        </div>
-                    </div>
-                    <div class="movie-list">
-                        <div class="item">
-                            <img class="item-img" src="/media-images/1.jpeg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/2.jpeg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/3.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/4.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/5.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/6.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/7.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
+                    <h2>REMOVING FROM FAVORITE</h2>
+                    <div class="content">
+                        <div class="content-container">
+                            <span>Are you sure you want to remove this video from favorites?</span>
+                            <div class="confirmation">
+                                <a href="" id="yes">Yes</a>
+                                <a href="" id="no">No</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="movie-list-container">
-                <div class="title">
+
+            <div class="playlist">
+                <div class="head">
                     <span>PLAYLIST</span>
-                    <i class="fa-solid fa-chevron-right arrow"></i>
                 </div>
+                <div class="table-data">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Playlist</th>
+                                <th>Videos</th>
+                                <th>Date Created</th>
+                                <th class="last-child">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Vibes</td>
+                                <td>3</td>
+                                <td>18/05/22</td>
+                                <td class="action">
+                                    <a href="#edit-list"><span id="edit" style="cursor:pointer">Edit</span></a>
+                                    <a href="#del-list"><span id="delete" style="cursor:pointer">Delete</span></a>
+                                    <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
+                                </td>                        
+                            </tr>
+                            <tr>
+                                <td>Chill</td>
+                                <td>3</td>
+                                <td>10/05/22</td>
+                                <td class="action">
+                                    <a href="#edit-list"><span id="edit" style="cursor:pointer">Edit</span></a>
+                                    <a href="#del-list"><span id="delete" style="cursor:pointer">Delete</span></a>
+                                    <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
+                                </td>                        
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Confirmation popup  -->
+            <div class="popup" id="del-list">
                 <div class="wrapper">
-                    <div class="top">
-                        <div class="filter">
-                            <p>Filter</p>
-                            <span class="material-icons">expand_more</span>
-                        </div>
-                        <div class="search">
-                            <input type="text" placeholder="Search">
-                            <span class="material-icons">search</span>
-                        </div>
-                    </div>
-                    <div class="movie-list">
-                        <div class="item">
-                            <img class="item-img" src="/media-images/1.jpeg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/2.jpeg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/3.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/4.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/5.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/6.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/7.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
+                    <h2>DELETING PLAYLIST</h2>
+                    <div class="content">
+                        <div class="content-container">
+                            <span>Are you sure you want to delete this playlist?</span>
+                            <div class="confirmation">
+                                <a href="" id="yes">Yes</a>
+                                <a href="" id="no">No</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="movie-list-container">
-                <div class="title">
-                    <span>WATCH LATER</span>
-                    <i class="fa-solid fa-chevron-right arrow"></i>
-                </div>
+
+            <!-- Pop up to edit new  -->
+            <div class="popup" id="edit-list">
                 <div class="wrapper">
-                    <div class="top">
-                        <div class="filter">
-                            <p>Filter</p>
-                            <span class="material-icons">expand_more</span>
-                        </div>
-                        <div class="search">
-                            <input type="text" placeholder="Search">
-                            <span class="material-icons">search</span>
+                    <h2>EDITING PLAYLIST</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <div class="content-container">
+                            <form>
+                                <div class="name">
+                                    <label>Playlist name</label>
+                                    <input value="Vibes" type="text">
+                                </div>
+                                <input type="submit" value="Save changes">
+                            </form>
                         </div>
                     </div>
-                    <div class="movie-list">
-                        <div class="item">
-                            <img class="item-img" src="/media-images/1.jpeg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
+                </div>
+            </div>
+
+            <!-- Pop up to select video new  -->
+            <div class="popup" id="play-list">
+                <div class="wrapper">
+                    <h2>SELECTING VIDEO</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <div class="content-container">
+                            <form>
+                                <div class="name">
+                                    <label style="width: 25%; margin-left: 6rem;">Video</label>
+                                    <select style="margin-left: 1.2rem;">
+                                        <option value="">The Queen's Gambit</option>
+                                        <option value="">Bird Box</option>
+                                        <option value="">Red Notice</option>
+                                    </select>
+                                </div>
+                                <input type="submit" value="Play">
+                            </form>
                         </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/2.jpeg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/3.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/4.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/5.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/6.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/7.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playlist">
+                <div class="head">
+                    <span>WATCH LATER</span>
+                </div>
+                <div class="table-data">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Video</th>
+                                <th>Date</th>
+                                <th class="last-child">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bird Box</td>
+                                <td>18/05/22</td>
+                                <td class="action">
+                                    <a href="#remove-later"><span id="delete" style="cursor:pointer">Remove</span></a>
+                                    <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
+                                </td>                        
+                            </tr>
+                            <tr>
+                                <td>Red Notice</td>
+                                <td>10/05/22</td>
+                                <td class="action">
+                                    <a href="#remove-later"><span id="delete" style="cursor:pointer">Remove</span></a>
+                                    <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
+                                </td>                        
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Confirmation popup  -->
+            <div class="popup" id="remove-later">
+                <div class="wrapper">
+                    <h2>REMOVING FROM WATCH LATER</h2>
+                    <div class="content">
+                        <div class="content-container">
+                            <span>Are you sure you want to remove video from watch later?</span>
+                            <div class="confirmation">
+                                <a href="" id="yes">Yes</a>
+                                <a href="" id="no">No</a>
                             </div>
                         </div>
                     </div>

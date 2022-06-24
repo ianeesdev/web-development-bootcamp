@@ -22,38 +22,36 @@
             </div>
 
             <div class="sidebar">
-                <!-- Home -->
-                <a href="/user-panel-home.html"><span class="material-icons">home</span><h3>Home</h3></a>
-
                 <!-- Profile -->
-                <a href="/user-panel-profile.html" ><span class="material-icons" >person</span><h3>Your Profile</h3></a>
+                <a href="user-panel-profile.html" ><span class="material-icons" >person</span><h3>Your Profile</h3></a>
  
                 <!-- Subscriptions -->
-                <a href="/user-panel-subscriptions.html" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
+                <a href="user-panel-subscriptions.html" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
  
                 <!-- Search Videos -->
-                <a href="/user-panel-search.html" ><span class="material-icons">search</span><h3>Search Videos</h3></a>
+                <a href="user-panel-search.html" ><span class="material-icons">search</span><h3>Search Videos</h3></a>
  
                 <!-- Request Videos -->
-                <a href="/user-panel-request.html"><span class="material-icons">mail</span><h3>Request Videos</h3></a>
+                <a href="user-panel-request.html"><span class="material-icons">mail</span><h3>Request Videos</h3></a>
  
                 <!-- Playlist -->
-                <a href="/user-panel-list.html" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
+                <a href="user-panel-list.html" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
  
                 <!-- Others-->
                 <a href="" class="active"><span class="material-icons">contact_support</span><h3>Others</h3></a>
  
                 <!-- Log Out -->
-                <a href="/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            
+                <a href="/same-panels/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            
             </div>
         </aside>
 
         <!-- --------------------- END OF ASIDE ---------------------------- -->
-        <main>
-            <h1>Feedback</h1>
+        <main>        
             <div class="feedback">
-                <span>Send a feedback</span>
+                <h1>Feedback</h1>
+                <a href="#send-feedback"><span>Send a feedback</span></a>
             </div>
+
             <h1>FAQ</h1>
             <div class="accordion">
             <div class="accordion-item">
@@ -90,6 +88,25 @@
                     </ul>
                 </div>
                 </div>
+
+                <!-- Pop up on add new  -->
+            <div class="popup" id="send-feedback">
+                <div class="wrapper">
+                    <h2>SENDING FEEDBACK</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <div class="content-container">
+                            <form>
+                                <div class="name">
+                                    <label>Feedback</label>
+                                    <input placeholder="Enter feedback here" type="text">
+                                </div>
+                                <input type="submit" value="Send feedback">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>                  
         <!------------------------------ END OF MAIN ------------------------->
     </div>

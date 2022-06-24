@@ -259,27 +259,30 @@ main .pic-btn{
     margin-top: 1rem;
 }
 
-main .pic-btn button, main .profile-btn button{
+main .pic-btn a, main .profile-btn a{
     background-color: var(--color-info-light);
     color:  #2c3336;
     border-radius: 0.2rem;
 }
 
-main .pic-btn button{
+main .pic-btn span, main .profile-btn span{
+    font-size: 1rem;
+}
+
+main .pic-btn a{
     margin: 0.6rem 0.6rem 0 0;
     padding: 0.3rem 1rem 0.3rem 1rem;
 }
 
-main .profile-btn button{
+main .profile-btn a{
     justify-content: right;
     margin-top: 1rem;
     margin-left: 1.5rem;
     padding: 0.3rem 1rem 0.3rem 1rem;
 }
 
-main .profile-info button:hover{
-    background-color: #3d4447;
-    color: var(--color-info-light);
+main .profile-info a:hover{
+    background-color: #bdc9ce;
     cursor: pointer;
 }
 
@@ -331,6 +334,7 @@ main .profile-info h3, main .sub-info h3{
 main table{
     border-collapse: separate;
     border-spacing: 0.5rem;
+    margin-bottom: 0.6rem;
 }
 
 main table td{
@@ -350,3 +354,178 @@ main table td:nth-child(2){
     margin-top: 0.5rem; 
     border-radius: 0.7rem;
 } 
+
+/* Popup */
+.popup {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.8);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.popup:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.wrapper {
+	margin: 150px auto;
+	padding: 20px;
+	background: #e7e7e7;
+	border-radius: 5px;
+	width: 40%;
+	position: relative;
+	transition: all 5s ease-in-out;
+    text-align: center;
+}
+
+.wrapper h2 {
+	margin-top: 0.7rem;
+	color: #333;
+    letter-spacing: 0.2em;
+}
+
+.wrapper .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.wrapper .close:hover {
+	color: red;
+}
+
+.wrapper .content {
+	max-height: 30%;
+}
+
+.content-container{
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: black;
+}
+
+#change-pic .wrapper{
+    margin: 100px auto;
+}
+
+#update-profile .wrapper{
+    margin: 90px auto;
+}
+
+.confirmation{
+    margin-top: 1.5rem;
+}
+
+.confirmation a{
+    padding: 0.3rem 1.5rem;
+    border-radius: 5px;
+}
+
+#yes{
+    background-color: green;
+    margin-right: 1.2rem;
+}
+
+#no{
+    background-color: red;
+}
+
+/* Popup form */
+form{
+    margin-top: 3rem;
+}
+
+form .name,form .password,form .email,form .contact, form .gender{
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+form .password input{
+    margin-left: 1.7rem;
+}
+
+form .email input{
+    margin-left: 4.1rem;
+}
+
+form .contact input{
+    margin-left: 2.5rem;
+}
+
+form .gender select{
+    margin-left: 3rem;
+}
+
+form label{
+    background-color: var(--color-white);
+    color: white;
+    letter-spacing: 0.2em;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    margin-left: 2.5rem;
+    font-size: 0.9rem;
+}
+
+form input, form select{
+    border-radius: 5px;
+    margin-left: 1.5rem;
+    width: auto;
+    padding: 0.2rem 0.8rem;
+}
+
+form select{
+    margin-left: 4.2rem;
+}
+
+form input::placeholder{
+    padding: 0.4rem 0.8rem;
+}
+
+form select option{
+    padding: 0.2rem 0.8rem;
+}
+
+form input[type="submit"]{
+    margin-top: 3rem;
+    background-color: #731c20e1;
+    color: white;
+    padding: 0.5rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+form input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #731c20;
+}
+
+form .new-profile label{
+    margin: auto;
+}
+
+#display-image{
+    /* Default image */
+    background-image: url(/other-images/Admin/Angelo\ Holt.jpg);
+    width: 15rem;
+    height: 15rem;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin: 2rem auto;
+}
+
+#change-div .wrapper{
+    margin: 90px auto;
+}

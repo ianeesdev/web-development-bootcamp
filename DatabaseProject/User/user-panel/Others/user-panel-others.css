@@ -234,14 +234,6 @@ aside .sidebar a:hover{
     color: #dcd3d3;
 }
 
-aside .sidebar .request-count{
-    background: var(--color-danger);
-    color: var(--color-dark);
-    padding: 2px 10px;
-    font-size: 11px;
-    border-radius: var(--border-radius-1);
-}
-
 /* -------------------- MAIN--------------------------- */
 
 .main{
@@ -252,34 +244,36 @@ aside .sidebar .request-count{
 h1 {
     margin: 2rem 0;
     font-size: 2.5rem;
-  }
+}
   
-  .feedback span{
+.feedback a{
     font-size: 1.2rem;
     background-color: var(--color-primary);
     color: var(--color-dark);
     padding: 0.3rem 1.5rem;
     border-radius: 5px;
-  }
+}
 
-  .feedback span:hover{
+.feedback span:hover{
     background-color: #6d0d1299;
     cursor: pointer;
-  }
+}
 
-  .accordion {
+.accordion {
     width: 90%;
     max-width: 1000px;
     margin: 2rem 0;
-  }
-  .accordion-item {
+}
+
+.accordion-item {
     background-color: var(--color-primary);
     color: var(--color-dark);
     margin: 1rem 0;
     border-radius: 0.5rem;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
-  }
-  .accordion-item-header {
+}
+
+.accordion-item-header {
     padding: 0.5rem 3rem 0.5rem 1rem;
     min-height: 3.5rem;
     line-height: 1.25rem;
@@ -287,34 +281,144 @@ h1 {
     display: flex;
     position: relative;
     cursor: pointer;
-  }
+}
 
-  .accordion-item-header:hover{
+.accordion-item-header:hover{
     background-color: #6d0d1299;
-  }
+}
 
-  .accordion-item-header::after {
+.accordion-item-header::after {
     content: "\002B";
     font-size: 2rem;
     position: absolute;
     right: 1rem;
-  }
-  .accordion-item-header.active::after {
+}
+
+.accordion-item-header.active::after {
     content: "\2212";
-  }
-  .accordion-item-body {
+}
+
+.accordion-item-body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-  }
-  .accordion-item-body-content {
+}
+
+.accordion-item-body-content {
     padding: 1rem;
     line-height: 1.5rem;
     border-top: 1px solid #edeffd38;
-  }
+}
   
-  @media(max-width:767px) {
+@media(max-width:767px) {
     html {
       font-size: 14px;
     }
-  }
+}
+
+/* Popup */
+.popup {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.8);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.popup:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.wrapper {
+	margin: 150px auto;
+	padding: 20px;
+	background: #e7e7e7;
+	border-radius: 5px;
+	width: 40%;
+	position: relative;
+	transition: all 5s ease-in-out;
+    text-align: center;
+}
+
+.wrapper h2 {
+	margin-top: 0.7rem;
+	color: #333;
+    letter-spacing: 0.2em;
+}
+
+.wrapper .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.wrapper .close:hover {
+	color: red;
+}
+
+.wrapper .content {
+	max-height: 30%;
+}
+
+/* Popup form */
+form{
+    margin-top: 3rem;
+}
+
+form .name, form .gender{
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+form label{
+    background-color: var(--color-white);
+    color: white;
+    letter-spacing: 0.2em;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    margin-left: 2.5rem;
+    font-size: 0.9rem;
+}
+
+form input, form select{
+    border-radius: 5px;
+    margin-left: 1.5rem;
+    width: 50%;
+    padding: 0.2rem 0.8rem;
+}
+
+form select{
+    margin-left: 4.2rem;
+}
+
+form input::placeholder{
+    padding: 0.4rem 0.8rem;
+}
+
+form select option{
+    padding: 0.2rem 0.8rem;
+}
+
+form input[type="submit"]{
+    margin-top: 3rem;
+    background-color: #731c20e1;
+    color: white;
+    padding: 0.5rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+form input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #731c20;
+}

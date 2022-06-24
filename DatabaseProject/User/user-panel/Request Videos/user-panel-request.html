@@ -22,29 +22,26 @@
             </div>
 
             <div class="sidebar">
-                <!-- Home -->
-                <a href="/user-panel-home.html"><span class="material-icons">home</span><h3>Home</h3></a>
-
                 <!-- Profile -->
-                <a href="/user-panel-profile.html" ><span class="material-icons" >person</span><h3>Your Profile</h3></a>
+                <a href="user-panel-profile.html" ><span class="material-icons" >person</span><h3>Your Profile</h3></a>
  
                 <!-- Subscriptions -->
-                <a href="/user-panel-subscriptions.html" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
+                <a href="user-panel-subscriptions.html" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
  
                 <!-- Search Videos -->
-                <a href="/user-panel-search.html" ><span class="material-icons">search</span><h3>Search Videos</h3></a>
+                <a href="user-panel-search.html" ><span class="material-icons">search</span><h3>Search Videos</h3></a>
  
                 <!-- Request Videos -->
                 <a href="" class="active"><span class="material-icons">mail</span><h3>Request Videos</h3></a>
  
                 <!-- Playlist -->
-                <a href="/user-panel-list.html" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
+                <a href="user-panel-list.html" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
  
                 <!-- Others-->
-                <a href="/user-panel-others.html" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
+                <a href="user-panel-others.html" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
  
                 <!-- Log Out -->
-                <a href="/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            
+                <a href="/same-panels/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            
             </div>
         </aside>
 
@@ -52,18 +49,37 @@
         <main>
             <div class="main-head">
                 <h1>Video Requests</h1>
-                <a href=""><span>Request a new Video</span></a>
+                <a href="#send-request"><span>Request a new Video</span></a>
             </div>
+
+            <!-- Pop up on add new  -->
+            <div class="popup" id="send-request">
+                <div class="wrapper">
+                    <h2>REQUESTING VIDEO</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <div class="content-container">
+                            <form>
+                                <div class="name">
+                                    <label>Media Title</label>
+                                    <input placeholder="Enter media title" type="text">
+                                </div>
+                                <div class="name">
+                                    <label>Media Type</label>
+                                    <select style="margin-left: 1.3rem;">
+                                        <option  selected disabled hidden value="">Select Media Type</option>
+                                        <option value="1">Movie</option>
+                                        <option value="2">Series</option>
+                                    </select>
+                                </div>
+                                <input type="submit" value="Request Video">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="top">
-                <div class="filters">
-                    <h2 onclick="">Filters</h2>
-                    <span class="material-symbols-sharp">arrow_drop_down</span>
-                </div>
-                <div class="pagination">
-                    <span class="material-symbols-sharp">navigate_before</span>
-                    <h2>Page 1</h2>
-                    <span class="material-symbols-sharp">navigate_next</span>
-                </div>
                 <div class="search">
                     <input type="text" placeholder="Search">
                     <span class="material-symbols-sharp">search</span>
@@ -89,13 +105,13 @@
                             <td>Squid Game</td>
                             <td>Series</td>
                             <td>18/05/22</td>
-                            <td class="danger">Pending</td>
+                            <td class="success">Approved</td>
                         </tr>
                         <tr>
                             <td>F.R.I.E.N.D.S</td>
                             <td>Series</td>
                             <td>10/05/22</td>
-                            <td class="success">Approved</td>
+                            <td class="danger">Pending</td>
                         </tr>
                         <tr>
                             <td>Red Notice</td>
@@ -107,13 +123,13 @@
                             <td>Money Heist</td>
                             <td>Series</td>
                             <td>29/04/22</td>
-                            <td class="success">Approved</td>
+                            <td class="danger">Pending</td>
                         </tr>
                         <tr>
                             <td>The Queen's Gambit</td>
                             <td>Series</td>
                             <td>13/04/22</td>
-                            <td class="danger">Pending</td>
+                            <td class="success">Approved</td>
                         </tr>
                         <tr>
                             <td>Extraction</td>
