@@ -25,22 +25,22 @@
 
             <div class="sidebar">
                 <!-- Profile -->
-                <a href="user-panel-profile.html"><span class="material-icons" >person</span><h3>Your Profile</h3></a>
+                <a href="user-panel-profile"><span class="material-icons" >person</span><h3>Your Profile</h3></a>
  
                 <!-- Subscriptions -->
-                <a href="user-panel-subscriptions.html" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
+                <a href="user-panel-subscriptions" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
  
                 <!-- Search Videos -->
                 <a href="" class="active"><span class="material-icons">search</span><h3>Search Videos</h3></a>
 
                 <!-- Request Videos -->
-                <a href="user-panel-request.html" ><span class="material-icons">mail</span><h3>Request Videos</h3></a>
+                <a href="user-panel-request" ><span class="material-icons">mail</span><h3>Request Videos</h3></a>
  
                 <!-- My List -->
-                <a href="user-panel-list.html" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
+                <a href="user-panel-list" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
  
                 <!-- Others-->
-                <a href="user-panel-others.html" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
+                <a href="user-panel-others" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
  
                 <!-- Log Out -->
                 <a href="/same-panels/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            </div>
@@ -49,6 +49,46 @@
         <!-- --------------------- END OF ASIDE ---------------------------- -->
         <div class="main">
             <h1>Search Videos</h1>
+            <!-- Movie overlay on right side -->
+            <!-- Placed it here ta k gum na jaye, nazar aa jaye while working -->
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <div class="media-title">
+                        <label>Title</label>
+                        <p>A Quiet Place</p>
+                    </div>
+                    <div class="desc">
+                        <label>Description</label>
+                        <div class="desc-sub">
+                            <p>
+                            A family struggles for survival in a world where most humans
+                            have been killed by blind but noise-sensitive creatures. 
+                            They are forced to communicate in sign language to keep the 
+                            creatures at bay.</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <label>Rating</label>
+                        <p>7.5</p>
+                    </div>
+                    <div class="duration">
+                        <label>Duration</label>
+                        <p>01:20:00</p>
+                    </div>
+                    <div class="release-date">
+                        <label>Release Date</label>
+                        <p>06-APR-18</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="buttons">
+                        <a href="#fav" onclick="closeNav();"><span class="material-icons fav">favorite</span></a>
+                        <a href="#playlist" onclick="closeNav();"><span class="material-icons playlist">playlist_add</span></a>
+                        <a href="#watch-later" onclick="closeNav();"><span class="material-icons later">watch_later</span></a>
+                    </div>
+                </div>
+            </div>
+
             <div class="movie-list-container">
                 <div class="title">
                     <span>MOVIES</span>
@@ -56,14 +96,30 @@
                 </div>
                 <div class="wrapper">
                     <div class="top">
-                        <div class="search">
-                            <input type="text" placeholder="Search">
-                            <span class="material-icons">search</span>
-                        </div>
+                        <form action="#" method="post">
+                            <div class="search">
+                                <input type="text" name="searchBox" placeholder="Search">
+                                <span class="material-icons">search</span>
+                            </div>
+                        </form> 
                     </div>
                     <div class="movie-list">
-                        <div class="item">
-                            <img class="item-img" src="/media-images/1.jpeg" alt="">
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Movies/A Quiet Place.png" alt="">
+                            <div class="item-title">
+                                <span>Her</span>
+                            </div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
+                                    placeat vitae in reprehenderit odit.</p>
+                            </div>
+                            <div class="item-btn">
+                                <button>Play</button>
+                            </div>
+                        </div>           
+
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Movies/Bird Box.jpg" alt="">
                             <div class="item-title">
                                 <span>Her</span>
                             </div>
@@ -75,8 +131,8 @@
                                 <button>Play</button>
                             </div>
                         </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/2.jpeg" alt="">
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Movies/Don't Breathe.png" alt="">
                             <div class="item-title">
                                 <span>Her</span>
                             </div>
@@ -88,8 +144,8 @@
                                 <button>Play</button>
                             </div>
                         </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/3.jpg" alt="">
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Movies/Five Feet Apart.png" alt="">
                             <div class="item-title">
                                 <span>Her</span>
                             </div>
@@ -101,8 +157,8 @@
                                 <button>Play</button>
                             </div>
                         </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/4.jpg" alt="">
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Movies/Joker.jpg" alt="">
                             <div class="item-title">
                                 <span>Her</span>
                             </div>
@@ -114,8 +170,8 @@
                                 <button>Play</button>
                             </div>
                         </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/5.jpg" alt="">
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Movies/Jurassic World Dominion.jpg" alt="">
                             <div class="item-title">
                                 <span>Her</span>
                             </div>
@@ -127,8 +183,8 @@
                                 <button>Play</button>
                             </div>
                         </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/6.jpg" alt="">
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Movies/La La Land.png" alt="">
                             <div class="item-title">
                                 <span>Her</span>
                             </div>
@@ -140,8 +196,47 @@
                                 <button>Play</button>
                             </div>
                         </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/7.jpg" alt="">
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Movies/Now You See Me.jpg" alt="">
+                            <div class="item-title">
+                                <span>Her</span>
+                            </div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
+                                    placeat vitae in reprehenderit odit.</p>
+                            </div>
+                            <div class="item-btn">
+                                <button>Play</button>
+                            </div>
+                        </div>
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Movies/Red Notice.jpg" alt="">
+                            <div class="item-title">
+                                <span>Her</span>
+                            </div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
+                                    placeat vitae in reprehenderit odit.</p>
+                            </div>
+                            <div class="item-btn">
+                                <button>Play</button>
+                            </div>
+                        </div>
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Movies/The Dark Knight.jpg" alt="">
+                            <div class="item-title">
+                                <span>Her</span>
+                            </div>
+                            <div class="item-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
+                                    placeat vitae in reprehenderit odit.</p>
+                            </div>
+                            <div class="item-btn">
+                                <button>Play</button>
+                            </div>
+                        </div>
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Movies/The Fault in our Stars.jpg" alt="">
                             <div class="item-title">
                                 <span>Her</span>
                             </div>
@@ -156,6 +251,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="movie-list-container">
                 <div class="title">
                     <span>TV SHOWS</span>
@@ -169,8 +265,8 @@
                         </div>
                     </div>
                     <div class="movie-list">
-                        <div class="item">
-                            <img class="item-img" src="/media-images/1.jpeg" alt="">
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Series/Euphoria.jpg" alt="">
                             <div class="item-title">
                                 <span>Her</span>
                             </div>
@@ -182,8 +278,8 @@
                                 <button>Play</button>
                             </div>
                         </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/2.jpeg" alt="">
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Series/Squid Game.png" alt="">
                             <div class="item-title">
                                 <span>Her</span>
                             </div>
@@ -195,60 +291,8 @@
                                 <button>Play</button>
                             </div>
                         </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/3.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/4.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/5.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/6.jpg" alt="">
-                            <div class="item-title">
-                                <span>Her</span>
-                            </div>
-                            <div class="item-desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit 
-                                    placeat vitae in reprehenderit odit.</p>
-                            </div>
-                            <div class="item-btn">
-                                <button>Play</button>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="item-img" src="/media-images/7.jpg" alt="">
+                        <div class="item" style="cursor:pointer" onclick="openNav()">
+                            <img class="item-img" src="/other-images/Media/Series/The Queen's Gambit.jpg" alt="">
                             <div class="item-title">
                                 <span>Her</span>
                             </div>
@@ -263,6 +307,52 @@
                     </div>
                 </div>
             </div>
+
+             <!-- Confirmation popup (Favorites)  -->
+             <div class="popup" id="fav">
+                <div class="wrapper">
+                    <h2>ADDING TO FAVORITES</h2>
+                    <div class="content">
+                        <div class="confirm-container">
+                            <span>Media added to Favorites.</span>
+                            <div class="confirmation">
+                                <a href="" id="yes">Ok</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Confirmation popup (Playlist) -->
+            <div class="popup" id="playlist">
+                <div class="wrapper">
+                    <h2>ADDING TO PLAYLIST</h2>
+                    <div class="content">
+                        <div class="confirm-container">
+                            <span>Media added to Playlist.</span>
+                            <div class="confirmation">
+                                <a href="" id="yes">Ok</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Confirmation popup (Watch Later) -->
+            <div class="popup" id="watch-later">
+                <div class="wrapper">
+                    <h2>ADDING TO WATCH LATER</h2>
+                    <div class="content">
+                        <div class="confirm-container">
+                            <span>Media added to Watch Later.</span>
+                            <div class="confirmation">
+                                <a href="" id="yes">Ok</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <!------------------------------ END OF MAIN ------------------------->
     </div>

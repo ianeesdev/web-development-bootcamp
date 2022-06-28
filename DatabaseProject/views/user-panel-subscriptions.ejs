@@ -23,22 +23,22 @@
 
             <div class="sidebar">
                 <!-- Profile -->
-                <a href="user-panel-profile.html" ><span class="material-icons" >person</span><h3>Your Profile</h3></a>
+                <a href="user-panel-profile" ><span class="material-icons" >person</span><h3>Your Profile</h3></a>
  
                 <!-- Subscriptions -->
                 <a href="" class="active"><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
  
                 <!-- Search Videos -->
-                <a href="user-panel-search.html" ><span class="material-icons">search</span><h3>Search Videos</h3></a>
+                <a href="user-panel-search" ><span class="material-icons">search</span><h3>Search Videos</h3></a>
  
                 <!-- Request Videos -->
-                <a href="user-panel-request.html" ><span class="material-icons">mail</span><h3>Request Videos</h3></a>
+                <a href="user-panel-request" ><span class="material-icons">mail</span><h3>Request Videos</h3></a>
  
                 <!-- Playlist -->
-                <a href="user-panel-list.html" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
+                <a href="user-panel-list" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
  
                 <!-- Others-->
-                <a href="user-panel-others.html" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
+                <a href="user-panel-others" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
                 
                 <!-- Log Out -->
                 <a href="/same-panels/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            
@@ -52,32 +52,32 @@
                 <table>
                     <tr>
                         <td>Card Holder</td>
-                        <td>Eesha Shahid</td>
+                        <td><%= data[1] %> </td>
                     </tr>
                     
                     <tr>
                         <td>Package</td>
-                        <td>Basic</td>
+                        <td><%= data[7] %> </td>
                     </tr>
                     <tr>
                         <td>Payment</td>
-                        <td>Debit</td>
+                        <td><%= data[8] %> </td>
                     </tr>
                     <tr>
                         <td>Card Number</td>
-                        <td>1234 5678 9101 1121</td>
+                        <td><%= data[9] %> </td>
                     </tr>
                     <tr>
                         <td>CVC</td>
-                        <td>987</td>
+                        <td><%= data[10] %> </td>
                     </tr>
                     <tr>
                         <td>Card Expiry Date</td>
-                        <td>14-09-23</td>
+                        <td><%= data[11] %> </td>
                     </tr>
                     <tr>
                         <td>Package Expiry Date</td>
-                        <td>10/06/222</td>
+                        <td><%= data[12] %> </td>
                     </tr>
                 </table>
             </div>

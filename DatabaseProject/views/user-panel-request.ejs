@@ -23,22 +23,22 @@
 
             <div class="sidebar">
                 <!-- Profile -->
-                <a href="user-panel-profile.html" ><span class="material-icons" >person</span><h3>Your Profile</h3></a>
+                <a href="user-panel-profile" ><span class="material-icons" >person</span><h3>Your Profile</h3></a>
  
                 <!-- Subscriptions -->
-                <a href="user-panel-subscriptions.html" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
+                <a href="user-panel-subscriptions" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
  
                 <!-- Search Videos -->
-                <a href="user-panel-search.html" ><span class="material-icons">search</span><h3>Search Videos</h3></a>
+                <a href="user-panel-search" ><span class="material-icons">search</span><h3>Search Videos</h3></a>
  
                 <!-- Request Videos -->
                 <a href="" class="active"><span class="material-icons">mail</span><h3>Request Videos</h3></a>
  
                 <!-- Playlist -->
-                <a href="user-panel-list.html" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
+                <a href="user-panel-list" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
  
                 <!-- Others-->
-                <a href="user-panel-others.html" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
+                <a href="user-panel-others" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
  
                 <!-- Log Out -->
                 <a href="/same-panels/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            
@@ -59,19 +59,20 @@
                     <a class="close" href="#">&times;</a>
                     <div class="content">
                         <div class="content-container">
-                            <form>
+                            <form action="#" method="post">
                                 <div class="name">
                                     <label>Media Title</label>
-                                    <input placeholder="Enter media title" type="text">
+                                    <input placeholder="Enter media title" name="mediaName" type="text">
                                 </div>
                                 <div class="name">
                                     <label>Media Type</label>
-                                    <select style="margin-left: 1.3rem;">
-                                        <option  selected disabled hidden value="">Select Media Type</option>
-                                        <option value="1">Movie</option>
-                                        <option value="2">Series</option>
+                                    <select name="picker" style="margin-left: 1.3rem;">
+                                        <option value="" selected>Select Media Type</option>
+                                        <option value="movie">Movie</option>
+                                        <option value="series">Series</option>
                                     </select>
                                 </div>
+                                <input class="hi" type="hidden" id="userID" name="userID" value= <%= data[0]%> <style> </style>/>
                                 <input type="submit" value="Request Video">
                             </form>
                         </div>
@@ -95,54 +96,30 @@
                     <thead>
                         <tr>
                             <th>Title</th>
-                            <th>Media Type</th>
                             <th>Request Date</th>
                             <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Squid Game</td>
-                            <td>Series</td>
-                            <td>18/05/22</td>
-                            <td class="success">Approved</td>
-                        </tr>
-                        <tr>
-                            <td>F.R.I.E.N.D.S</td>
-                            <td>Series</td>
-                            <td>10/05/22</td>
-                            <td class="danger">Pending</td>
-                        </tr>
-                        <tr>
-                            <td>Red Notice</td>
-                            <td>Movie</td>
-                            <td>01/05/22</td>
-                            <td class="danger">Pending</td>
-                        </tr>
-                        <tr>
-                            <td>Money Heist</td>
-                            <td>Series</td>
-                            <td>29/04/22</td>
-                            <td class="danger">Pending</td>
-                        </tr>
-                        <tr>
-                            <td>The Queen's Gambit</td>
-                            <td>Series</td>
-                            <td>13/04/22</td>
-                            <td class="success">Approved</td>
-                        </tr>
-                        <tr>
-                            <td>Extraction</td>
-                            <td>Movie</td>
-                            <td>02/02/22</td>
-                            <td class="danger">Pending</td>
-                        </tr>
+                        <%for (let i = 0; i < reqData.length; i++) {%>
+                            <tr>
+                                <td><%= reqData[i][0]%></td>
+                                <td><%= reqData[i][1]%></td>
+                                <% if (reqData[i][2] == 'Pending') {%> 
+                                    <td class="danger"><%= reqData[i][2]%></td>
+                                <%}%>
+                                <% if (reqData[i][2] == 'Approved') {%>
+                                    <td class="success"><%= reqData[i][2]%></td>
+                                <%}%>
+                            </tr>
+                        <%}%>
                     </tbody>
                 </table>
             </div>
         </main>                  
         <!------------------------------ END OF MAIN ------------------------->
     </div>
+    
 
     <script src="user-panel-request.js"></script>
 </body>

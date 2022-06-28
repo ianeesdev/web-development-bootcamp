@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="admin-panel-login.css">
+    <link rel="icon" href="/other-images/logo.png" type="image/icon type">
+         
+    <title>Admin Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+
+                <!-- Login Heading -->
+                <span class="title">Login</span>
+
+                <!-- Next Link after clicking Login-->
+                <form action="#">
+
+                    <!-- Email text field -->
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+
+                    <!-- Password text field -->
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <!-- Login Button -->
+
+                    <div class="input-field button">
+
+                        <!-- In case of correct input -->
+                        <!-- <a href="/admin-panel/Dashboard/admin-panel-dashboard.html"><input type="button" value="Login" id="loginBtn"></a> -->
+
+                        <!-- In case of wrong input -->
+                        <a href="#redirect"><input type="button" value="Login" id="loginBtn"></a>
+                    </div>
+
+                    <!-- Redirecting to home page popup in case  of no user or subscriber found-->
+                    <div class="popup" id="redirect">
+                        <div class="wrapper">
+                            <h2>AUTHENTICATION ERROR</h2>
+                            <div class="content">
+                                <div class="confirm-container">
+                                    <span>It seems like no such account exists!</span>
+                                    <div class="confirmation">
+                                        <a href="/admin-panel/Login/admin-panel-login.html" id="yes">Try Again</a>
+                                        <a href="/same-panels/landing-page.html" id="no">Go to Homepage</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS link -->
+    <script src="/admin-panel/Login/admin-panel-login.js"></script>
+
+</body>
+</html>

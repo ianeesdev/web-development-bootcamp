@@ -4,90 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">      
-    <link rel="stylesheet" href="panel-profile.css">
-    <link rel="icon" href="logo.png" type="image/icon type">
-    <title>Admin Panel
-    </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">     
+    <link rel="stylesheet" href="user-panel-profile.css">
+    <link rel="icon" href="/other-images/logo.png" type="image/icon type">
+    <title>Profile</title> 
 </head>
 <body>
     <div class="container">
         <aside>
-
             <div class="top">
                 <!-- Logo + name -->
                 <div class="logo">
-                    <img src="logo.png" alt="">
+                    <img src="/other-images/logo.png" alt="">
                     <h2>AE<span style="color: #df1e24;">Flix</span></h2>
                 </div>
             </div>
 
             <div class="sidebar">
-                <!-- Dashboard -->
-                <a href="admin-panel-dashboard.html"><span class="material-icons">grid_view</span><h3>Dashboard</h3></a>
-                
                 <!-- Profile -->
-                <a href="" class="active"><span class="material-icons">person</span><h3>Profile</h3></a>
-
-                <!-- Adminss -->
-                <a href="admin-panel-admin.html"><span class="material-icons">verified_user</span><h3>Admins</h3></a>
-                
-                <!-- Customers -->
-                <a href="admin-panel-customers.html">
-                    <span class="material-icons">group</span>
-                    <h3>Customers</h3>
-                </a>
-                
+                <a href="" class="active"><span class="material-icons" >person</span><h3>Your Profile</h3></a>
+ 
                 <!-- Subscriptions -->
-                <a href="admin-panel-subscribers.html"><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
-                
-                <!-- Actors -->
-                <a href="admin-panel-actors.html"><span class="material-icons">theater_comedy</span><h3>Actors</h3></a>
-
-                <!-- Producers -->
-                <a href="admin-panel-producers.html"><span class="material-icons">video_camera_front</span><h3>Producers</h3></a>
-
-                <!-- Directors -->
-                <a href="admin-panel-directors.html"><span class="material-icons">videocam</span><h3>Directors</h3></a>
-                
-                <!-- Videos -->
-                <a href="admin-panel-videos.html"> <span class="material-icons">theaters</span><h3>Videos</h3></a>
-                
-                <!-- Video Requests -->                  
-                <a href="admin-panel-requests.html"><span class="material-icons">mail</span><h3>Requests</h3></a>            
-                
-                <!-- Customer Feedbacks -->
-                <a href="admin-panel-feedbacks.html"><span class="material-icons">reviews</span><h3>Feedbacks</h3></a>
-                
+                <a href="user-panel-subscriptions" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
+ 
+                <!-- Search Videos -->
+                <a href="user-panel-search" ><span class="material-icons">search</span><h3>Search Videos</h3></a>
+ 
+                <!-- Request Videos -->
+                <a href="user-panel-request" ><span class="material-icons">mail</span><h3>Request Videos</h3></a>
+ 
+                <!-- Playlist -->
+                <a href="user-panel-list" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
+ 
+                <!-- Others-->
+                <a href="user-panel-others" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
+ 
                 <!-- Log Out -->
-                <a href="/same-panels/landing-page.html"><span class="material-icons">logout</span><h3>Log Out</h3></a>
+                <a href="/same-panels/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            
             </div>
         </aside>
 
         <!-- --------------------- END OF ASIDE ---------------------------- -->
         <main>
-
             <h1>Profile Information</h1> 
 
             <div class="profile-info">
                 <div class="profile-pic">
                     <h3>Profile Picture</h3>
                     <div id="profile-container">
-                        <img src="profile-pic.png" alt="">
+                        <img src="/other-images/profile-pic.png" alt="">
                     </div>
                     <div class="pic-btn">
                         <div class="change-btn">
-                            <a href="#change-div"><span>Change Picture</span></a>                        
+                            <a href="#change-pic"><span>Change Picture</span></a>                        
                         </div>
                         <div class="remove-btn">
-                            <a href="#divOne"><span>Remove Picture</span></a>
+                            <a href="#remove-pic"><span>Remove Picture</span></a>                        
                         </div>
                     </div>
                  </div>
 
-                <!-- Change picture -->
-                <div class="popup" id="change-div">
+                 <!-- Change picture -->
+                <div class="popup" id="change-pic">
                     <div class="wrapper">
                         <h2>CHANGING PICTURE</h2>
                         <a class="close" href="#">&times;</a>
@@ -104,11 +82,10 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
-  
+
                 <!-- Confirmation popup  -->
-                <div class="popup" id="divOne">
+                <div class="popup" id="remove-pic">
                     <div class="wrapper">
                         <h2>REMOVING PROFILE PICTURE</h2>
                         <div class="content">
@@ -128,32 +105,40 @@
                     <table>
                         <tr>
                             <td>Name</td>
-                            <td>Eesha Shahid</td>
+                            <td>
+                                <%= data[1] %> 
+                            </td>
                         </tr>
                         
                         <tr>
                             <td>Password</td>
-                            <td>eesha123</td>
+                            <td> 
+                                <%= data[2] %> 
+                            </td>
                         </tr>
                         <tr>
                             <td>Email Address</td>
-                            <td>eesha.shahid14@gmail.com</td>
+                            <td> <%= data[3] %> </td>
                         </tr>
                         <tr>
                             <td>Contact</td>
-                            <td>0333-8177827</td>
+                            <td> <%= data[4] %> </td>
                         </tr>
                         <tr>
                             <td>Gender</td>
-                            <td>Female</td>
+                            <td> <%= data[5] %> </td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth</td>
+                            <td> <%= data[6] %> </td>
                         </tr>
                     </table>
                     <div class="profile-btn">
-                        <a href="#divOne2"><span>Update Information</span></a>
+                        <a href="#update-profile"><span>Update Information</span></a>
                     </div>
 
                     <!-- Pop up to update info  -->
-                    <div class="popup" id="divOne2">
+                    <div class="popup" id="update-profile">
                         <div class="wrapper">
                             <h2>UPDATING PROFILE</h2>
                             <a class="close" href="#">&times;</a>
@@ -203,15 +188,13 @@
                     </div>
                 </div>
             </div>
-
-
             <!------------------------END OF INSIGHTS ------------------------>
         </main>                  
         </div>
         <!------------------------------ END OF MAIN ------------------------->
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="admin-panel-profile.js"></script>
+    <script src="admin-panel-profile.js">
+        localStorage.setItem("userID", data[0]);
+    </script>
 </body>
 </html>

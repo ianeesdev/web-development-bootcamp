@@ -358,7 +358,7 @@ aside .sidebar .request-count{
 .movie-list{
     display: flex;
     align-items: center;
-    height: 16rem;
+    height: 23rem;
     transform: translateX(0);
     transition: all 1s ease-in-out;
 }
@@ -383,9 +383,9 @@ aside .sidebar .request-count{
 }
 
 .movie-list img{
-    width: 240px;
-    height: 180px;
-    object-fit: cover;
+    width: 230px;
+    height: 283px;
+    /* object-fit: cover; */
     border-radius: 10px;
 }
 
@@ -426,7 +426,7 @@ aside .sidebar .request-count{
     margin-top: 1.5rem;
     cursor: pointer;
     position: absolute;
-    bottom: 10px;
+    bottom: 42px;
     left: 5px;
     opacity: 0;
     transition: all 300ms ease-in-out;
@@ -440,4 +440,194 @@ aside .sidebar .request-count{
     color: lightgray;
     opacity: 0.5;
     cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right:0;
+    background-color: var(--color-primary);
+    backdrop-filter: blur(5px);
+    border-radius: 40px 0 0 40px;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+  
+.overlay-content {
+    position: relative;
+    top: 10%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+  
+.overlay-content div:not(.desc){
+    display: flex;
+    gap: 1.5rem;
+    margin: 0 10%;
+    font-size: 1.1rem;
+}
+
+.overlay-content .desc-sub{
+    margin: 5% 10% 0% 10% !important;
+    background-color: #383a3f78;
+    border-left:7px solid #75050b;
+    border-radius: 5px;
+}
+
+.overlay-content .desc p{
+    border-radius: 5px;
+    margin:1rem;
+    text-align: justify;
+    border-bottom: none;
+    line-height: 1.3rem;
+    font-size: 0.9rem;
+}
+
+.overlay-content label{
+    background-color: var(--color-background);
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+    color: white;
+    width: 40%;
+    text-align: center;
+}
+
+.overlay-content .desc label{
+    margin: 0 10%;
+    width: 40%;
+    font-size: 1.1rem;
+    padding: 0.2rem 2rem;
+}
+
+.overlay-content p{
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.line{
+    height: 1rem;
+    border-bottom: 1px solid #7d8da159;
+    width: 96%;
+}
+  
+.overlay-content .btn{
+    display: flex;
+    gap: 2rem;
+    margin: 0 30%;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 35px;
+}
+
+.buttons{
+    display: flex;
+    gap: 1.7rem;
+    margin-right: 3rem;
+}
+
+.overlay-content .buttons span{
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 0.6rem 0.7rem 0.6rem 0.6rem;
+    font-size: 1.7rem;
+    border-radius: 50%;
+}
+
+.overlay-content .buttons span:hover{
+    cursor: pointer;
+    background-color: #d0d4dd;
+}
+
+/* Popup */
+.popup {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.8);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.popup:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.popup .wrapper {
+	margin: 200px auto;
+	padding: 20px;
+	background: #e7e7e7;
+	border-radius: 5px;
+	width: 40%;
+	position: relative;
+	transition: all 5s ease-in-out;
+    text-align: center;
+}
+
+.popup .wrapper h2 {
+	margin-top: 0.7rem;
+	color: #333;
+    letter-spacing: 0.2em;
+}
+
+.popup .wrapper .close {
+	position: absolute;
+	top: 40px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.popup .wrapper .close:hover {
+	color: red;
+}
+
+.popup .wrapper .content {
+	max-height: 30%;
+}
+
+.confirm-container{
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.confirmation{
+    margin-top: 1.5rem;
+}
+
+.confirmation a{
+    padding: 0.3rem 1.5rem;
+    border-radius: 5px;
+}
+
+#yes{
+    background-color:#731c20ef;
+    margin-right: 1.2rem;
+    padding: 0.2rem 2.5rem;
 }

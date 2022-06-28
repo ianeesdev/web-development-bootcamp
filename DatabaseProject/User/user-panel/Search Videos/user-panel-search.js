@@ -1,3 +1,5 @@
+// Slider for movies/series
+
 const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll(".movie-list");
 
@@ -10,7 +12,7 @@ arrows.forEach((arrow,i) => {
         console.log(itemNumber);
         if (itemNumber - (4+clickCounter) >= 0){
             movieLists[i].style.transform = `translateX(${
-                movieLists[i].computedStyleMap().get("transform")[0].x.value-275}px)`;
+                movieLists[i].computedStyleMap().get("transform")[0].x.value-260}px)`;
         }
         else{
             movieLists[i].style.transform = `translateX(0)`;
@@ -19,3 +21,15 @@ arrows.forEach((arrow,i) => {
     })
     console.log();
 })
+
+
+// Sidebar overlay for movies/series
+function openNav() {
+    console.log("Open");
+    document.getElementById("myNav").style.width = "35%";
+  }
+  
+  function closeNav() {
+    console.log("Close");
+    document.getElementById("myNav").style.width = "0%";
+  }

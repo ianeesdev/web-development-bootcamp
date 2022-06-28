@@ -1,0 +1,175 @@
+{
+    "id" : 1,
+    "name" : "Ali",
+    "user_name": "ali23"
+    "address": "Isb",
+    "email": "ali123@gmail.com",
+
+    "group" : {
+
+        "created" : [
+            {
+                "id" : 1,
+                "name": "Science",
+                "description": "This is science group",
+                "date_created": 25-06-2022,
+            }
+        ],
+
+        "liked" : [
+            {
+                "id" : 2,
+                "createrID" : 1,
+                "name": "Cricket",
+                "description": "This is cricket related group",
+                "date_created": 25-06-2022, 
+            }
+        ]
+    },
+
+    "story": [
+
+        {
+            "id" : 1,
+            "dateTime" : 25-06-2022,
+        },
+
+        {
+            "id" : 2,
+            "dateTime" : 25-06-2022,
+        },
+    ],
+
+    "event": {
+
+        "created": [
+            {
+                "id": 1,
+                "dateTime" : 25-06-2022,
+                "host_name": ["Ali", "Sufian", "Mahrukh"],
+                "location": "Isb",
+            }
+        ],
+
+        "joined": [
+            {
+                "id": 2,
+                "createrID" : 1,
+                "dateTime" : 25-06-2022,
+                "host_name": ["Ahmad", "Munim", "Awais"],
+                "location": "Lhr",
+            }
+        ]
+    },
+
+    "message": {
+
+        "sent" : [
+            {
+                "message_id": 1,
+                "message_body": "How are you?",
+                "dateTime" : 25-06-2022,
+                "receiverID": 1
+            }
+        ],
+
+        "receive" : [
+            {
+                "message_id": 2,
+                "message_body": "fine vro?",
+                "dateTime" : 25-06-2022,
+                "senderID": 2
+            }
+        ]
+    },
+
+    "friend": [
+
+        {
+            "id": 1,
+            "name": "Mahrukh",
+            "address": "Jhl",
+            "email": "mah23@gmail.com",
+        },
+
+        {
+            "id": 2,
+            "name": "Munim",
+            "address": "Isb",
+            "email": "muni43@gmail.com",
+        }
+    ],
+
+    "page": {
+
+        "created" : [
+            {
+                "id": 1,
+                "name": "Cricket rants you can relate to",
+                "description": "thoughts about cricket",
+                "date_created": 25-06-2022,
+            }
+        ],
+
+        "liked" : [
+            {
+                "id": 2,
+                "createrID": 1,
+                "name": "Travel",
+                "description": "Travelling posts",
+                "date_created": 25-06-2022,
+            }
+        ]
+    },
+
+    "post": [
+        {
+            "id": 1,
+            "dateTime": 25-06-2022,
+            "type": "photo",
+            "description": "new profile picture",
+            "file": "pic.png",
+
+            "comment" : [
+                {
+                    "id": 1,
+                    "commenterID": 1,
+                    "text": "nyc vro",
+                    "dateTime": 25-03-2022,
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "dateTime": 25-06-2022,
+            "type": "video",
+            "description": "new video",
+            "file": "video.mp4",
+
+            "comment" : [
+                {
+                    "id": 2,
+                    "commenterID": 1,
+                    "text": "nice",
+                    "dateTime": 25-05-2022,
+                    "likes": 2,
+                }
+            ]
+        }
+    ],
+
+    "album": [
+        {
+            "id": 1,
+            "name": "Profile pictures",
+            "date_created": 25-05-2022,
+            "data":["pic1.png", "pic2.png"],
+        },
+        {
+            "id": 2,
+            "name": "Travel",
+            "date_created": 25-05-2022,
+            "data":["video1.mp4", "video2.mp4"],
+        }
+    ]
+}
