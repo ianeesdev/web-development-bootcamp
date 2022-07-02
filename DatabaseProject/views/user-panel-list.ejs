@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-------------------------- CSS ------------------------>
     <link rel="stylesheet" href="user-panel-list.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="icon" href="/other-images/logo.png" type="image/icon type">
 
     <title>Your Lists</title>
 </head>
+
 <body>
     <div class="container">
         <aside>
@@ -25,25 +27,40 @@
 
             <div class="sidebar">
                 <!-- Profile -->
-                <a href="user-panel-profile"><span class="material-icons" >person</span><h3>Your Profile</h3></a>
- 
+                <a href="user-panel-profile"><span class="material-icons">person</span>
+                    <h3>Your Profile</h3>
+                </a>
+
                 <!-- Subscriptions -->
-                <a href="user-panel-subscriptions" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
- 
+                <a href="user-panel-subscriptions"><span class="material-icons">subscriptions</span>
+                    <h3>Subscriptions</h3>
+                </a>
+
                 <!-- Search Videos -->
-                <a href="user-panel-search"><span class="material-icons">search</span><h3>Search Videos</h3></a>
+                <a href="user-panel-search"><span class="material-icons">search</span>
+                    <h3>Search Videos</h3>
+                </a>
 
                 <!-- Request Videos -->
-                <a href="user-panel-request" ><span class="material-icons">mail</span><h3>Request Videos</h3></a>
- 
+                <a href="user-panel-request"><span class="material-icons">mail</span>
+                    <h3>Request Videos</h3>
+                </a>
+
                 <!-- My List -->
-                <a href="" class="active"><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
- 
+                <a href="" class="active"><span class="material-icons">playlist_play</span>
+                    <h3>Your Lists</h3>
+                </a>
+
                 <!-- Others-->
-                <a href="user-panel-others" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
- 
+                <a href="user-panel-others"><span class="material-icons">contact_support</span>
+                    <h3>Others</h3>
+                </a>
+
                 <!-- Log Out -->
-                <a href="/same-panels/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            </div>
+                <a href="/same-panels/landing-page.html"><span class="material-icons">logout</span>
+                    <h3>Log Out</h3>
+                </a>
+            </div>
         </aside>
 
         <!-- --------------------- END OF ASIDE ---------------------------- -->
@@ -63,16 +80,20 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <%for (let i = 0; i < favlist.length; i++) {%>
-                            <tr>
-                                <td><%= favlist[i][0]%></td>
-                                <td><%= favlist[i][1]%></td>
-                                <td class="action">
-                                    <a href="#remove-fav"><span id="delete" style="cursor:pointer">Remove</span></a>
-                                    <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
-                                </td>
-                            </tr>
-                            <%}%>
+                            <%for (let i=0; i < favlist.length; i++) {%>
+                                <tr>
+                                    <td>
+                                        <%= favlist[i][0]%>
+                                    </td>
+                                    <td>
+                                        <%= favlist[i][1]%>
+                                    </td>
+                                    <td class="action">
+                                        <a href="#remove-fav"><span id="delete" style="cursor:pointer">Remove</span></a>
+                                        <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
+                                    </td>
+                                </tr>
+                                <%}%>
                         </tbody>
                     </table>
                 </div>
@@ -117,7 +138,7 @@
                                     <a href="#edit-list"><span id="edit" style="cursor:pointer">Edit</span></a>
                                     <a href="#del-list"><span id="delete" style="cursor:pointer">Delete</span></a>
                                     <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
-                                </td>                        
+                                </td>
                             </tr>
                             <tr>
                                 <td>Chill</td>
@@ -127,7 +148,7 @@
                                     <a href="#edit-list"><span id="edit" style="cursor:pointer">Edit</span></a>
                                     <a href="#del-list"><span id="delete" style="cursor:pointer">Delete</span></a>
                                     <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
-                                </td>                        
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -206,17 +227,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <%for (let i = 0; i < watchLater.length; i++) {%>
+                            <%for (let i=0; i < watchLater.length; i++) {%>
                                 <tr>
-                                    <td><%= watchLater[i][0]%></td>
-                                    <td><%= watchLater[i][1]%></td>
+                                    <td>
+                                        <%= watchLater[i][0]%>
+                                    </td>
+                                    <td>
+                                        <%= watchLater[i][1]%>
+                                    </td>
                                     <td class="action">
-                                        <a href="#remove-later"><span id="delete" style="cursor:pointer">Remove</span></a>
+                                        <a href="#remove-later"><span id="delete"
+                                                style="cursor:pointer">Remove</span></a>
                                         <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
-                                    </td>                        
+                                    </td>
                                 </tr>
-                            <%}%>
-                            <!-- <tr>
+                                <%}%>
+                                    <!-- <tr>
                                 <td>Bird Box</td>
                                 <td>18/05/22</td>
                                 <td class="action">
@@ -260,4 +286,5 @@
     <script src="user-panel-list.js"></script>
 
 </body>
+
 </html>

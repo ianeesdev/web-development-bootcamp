@@ -17,7 +17,7 @@ body{
 }
 
 .container{
-    min-height: 67vh;
+    min-height: 85vh;
     background: #eee;
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@ body{
 }
 
 .container .title{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     font-size: 25px;
     font-weight: 600;
     color: white;
@@ -75,12 +75,12 @@ body{
     color:#fff;
 }
 
-.container form .flexbox{
+.container form .flexbox, .container form .flexbox2{
     display: flex;
     gap:15px;
 }
 
-.container form .flexbox .inputBox{
+.container form .flexbox .inputBox, .container form .flexbox2 .inputBox{
     flex:1 1 150px;
 }
 

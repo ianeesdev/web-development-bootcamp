@@ -1,14 +1,14 @@
-// const express = require('express');
-// const path = require('path');
-// const bodyParser = require('body-parser');
-// const oracledb = require('oracledb');
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const oracledb = require('oracledb');
 
-// const app = express();
-// app.use(bodyParser.urlencoded({extended:false}));
-// app.use(bodyParser.json());
+const app = express();
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
-// const port = 4000;
-// //oracledb.maxRows = 4;
+const port = 4000;
+//oracledb.maxRows = 4;
 
 // // const email = 'aneese421@gmail.com';
 // // const pass = 'zz';
@@ -344,3 +344,22 @@
 
 var dateString = new Date();
 console.log(dateString.toDateString());
+
+let totalEpisodes = 0;
+oracledb.getConnection({
+    user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
+}, function (error, conection) {
+        if (error) {
+            return console.error(error);
+        }
+        conection.execute(`SELECT COUNT(*) FROM EPISODE`,
+        function (error, result) {
+            if (error) {
+                return console.error(error);
+            }
+            totalEpisodes = result.rows;
+            console.log(totalEpisodes[0][0]);
+            }
+        )
+    },
+)

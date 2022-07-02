@@ -299,54 +299,19 @@
                         <tr>
                             <th>Title</th>
                             <th>Seasons</th>
-                            <th>Air Year</th>
                             <th>Rating</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Breaking Bad</td>
-                            <td>5</td>
-                            <td>2008</td>
-                            <td>9.5</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>Game of Thrones</td>
-                            <td>8</td>
-                            <td>2011</td>
-                            <td>9.2</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>F.R.I.E.N.D.S</td>
-                            <td>10</td>
-                            <td>1994</td>
-                            <td>8.9</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>Money Heist</td>
-                            <td>5</td>
-                            <td>2017</td>
-                            <td>8.2</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>How to Get Away with Murder</td>
-                            <td>6</td>
-                            <td>2014</td>
-                            <td>8.1</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>Peaky Blinders</td>
-                            <td>6</td>
-                            <td>2013</td>
-                            <td>8.8</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
+                        <%for (let i = 0; i < allSeries.length; i++) {%>
+                            <tr>
+                                <td><%= allSeries[i][0]%></td>
+                                <td><%= allSeries[i][1]%></td>
+                                <td><%= allSeries[i][2]%></td>
+                                <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
+                            </tr>
+                        <%}%>       
                     </tbody>
                 </table>
             </div>

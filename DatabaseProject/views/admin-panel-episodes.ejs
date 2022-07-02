@@ -308,49 +308,23 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Title</th>
+                            <th>Series</th>
+                            <th>Episode Title</th>
                             <th>Release Year</th>
-                            <th>Seasons</th>
+                            <th>Season</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Titanic</td>
-                            <td>1997</td>
-                            <td>1</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>The Dark Knight</td>
-                            <td>2008</td>
-                            <td>1</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>Avatar</td>
-                            <td>2009</td>
-                            <td>2</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>Inception</td>
-                            <td>2010</td>
-                            <td>1</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>Django Unchained</td>
-                            <td>2012</td>
-                            <td>1</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>Sherlock Holmes</td>
-                            <td>2009</td>
-                            <td>1</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
+                        <%for (let i = 0; i < allEpisodes.length; i++) {%>
+                            <tr>
+                                <td><%= allEpisodes[i][0]%></td>
+                                <td><%= allEpisodes[i][1]%></td>
+                                <td><%= allEpisodes[i][2].toDateString().split(' ').slice(1).join(' ')%></td>
+                                <td><%= allEpisodes[i][3]%></td>
+                                <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
+                            </tr>
+                        <%}%>
                     </tbody>
                 </table>
             </div>

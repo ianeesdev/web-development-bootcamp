@@ -119,42 +119,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Kevin Feige</td>
-                            <td>Male</td>
-                            <td>1</td>
-                            <td class="action">
-                                <a href="#update-director"><span>Update</span></a>
-                                <a href="#remove-director"><span>Delete</span></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Kathleen Kennedy</td>
-                            <td>Female</td>
-                            <td>2</td>
-                            <td class="action">
-                                <a href="#update-director"><span>Update</span></a>
-                                <a href="#remove-director"><span>Delete</span></a>
-                            </td>                        
-                        </tr>
-                        <tr>
-                            <td>David Heyman</td>
-                            <td>Male</td>
-                            <td>1</td>
-                            <td class="action">
-                                <a href="#update-director"><span>Update</span></a>
-                                <a href="#remove-director"><span>Delete</span></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Neal H. Moritz</td>
-                            <td>Male</td>
-                            <td>1</td>
-                            <td class="action">
-                                <a href="#update-director"><span>Update</span></a>
-                                <a href="#remove-director"><span>Delete</span></a>
-                            </td>                        
-                        </tr>
+                        <%for (let i = 0; i < directors.length; i++) {%>
+                            <tr>
+                                <td><%= directors[i][0]%></td>
+                                <td><%= directors[i][1]%></td>
+                                <td><%= directors[i][2]%></td>
+                                <td class="action">
+                                    <a href="#update-producer"><span>Update</span></a>
+                                    <a href="#remove-producer"><span>Delete</span></a>
+                                </td>
+                            </tr>
+                        <%}%>
                     </tbody>
                 </table>
             </div>

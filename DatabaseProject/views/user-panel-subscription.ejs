@@ -14,7 +14,7 @@
 
 <div class="container">
     <div class="title">Card Details</div>
-    <form action="user-panel-profile.html">
+    <form action="user-panel-profile">
         <div class="inputBox">
             <span>Card number</span>
             <input type="text" maxlength="16" class="card-number-input">
@@ -63,6 +63,17 @@
                 <input type="text" maxlength="4" class="cvv-input">
             </div>
         </div>
+        <div class="flexbox2">
+            <div class="inputBox">
+                <span>Subscription Type</span>
+                <select name="" id="" class="month-input">
+                    <option value="month" selected disabled>type</option>
+                    <option value="Basic">Basic for Rs.450 Weekly</option>
+                    <option value="Standard">Standard for Rs.800 Monthly</option>
+                    <option value="Premium">Premium for Rs.1500 Annually</option>
+                </select>
+            </div>
+        </div>
         <a href=""><input type="submit" value="Subscribe" class="submit-btn"></a>
     </form>
 </div>    
@@ -105,6 +116,5 @@ document.querySelector('.cvv-input').oninput = () =>{
 }
 
 </script>
-
 </body>
 </html>

@@ -305,42 +305,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Breaking Bad</td>
-                            <td>15/JAN/08</td>
-                            <td>9.5</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>Game of Thrones</td>
-                            <td>15/JAN/08</td>
-                            <td>9.2</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>F.R.I.E.N.D.S</td>
-                            <td>15/JAN/08</td>
-                            <td>8.9</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>Money Heist</td>
-                            <td>15/JAN/08</td>
-                            <td>8.2</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>How to Get Away with Murder</td>
-                            <td>15/JAN/08</td>
-                            <td>8.1</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
-                        <tr>
-                            <td>Peaky Blinders</td>
-                            <td>15/JAN/08</td>
-                            <td>8.8</td>
-                            <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
-                        </tr>
+                        <%for (let i = 0; i < allMovies.length; i++) {%>
+                            <tr>
+                                <td><%= allMovies[i][0]%></td>
+                                <td><%= allMovies[i][1].toDateString().split(' ').slice(1).join(' ')%></td>
+                                <td><%= allMovies[i][2]%></td>
+                                <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
+                            </tr>
+                        <%}%>
                     </tbody>
                 </table>
             </div>

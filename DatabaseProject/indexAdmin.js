@@ -11,50 +11,28 @@ app.use(bodyParser.json());
 
 app.use(express.static('DatabaseProject'));
 app.use(express.static('DatabaseProject/views'));
-app.use(express.static("DatabaseProject/User"))
+app.use(express.static('DatabaseProject/css'));
+app.use(express.static('DatabaseProject/js'));
 app.use(express.static('DatabaseProject/Media'));
-app.use(express.static('DatabaseProject/same-panels'));
 app.use(express.static('DatabaseProject/other-images'));
-app.use(express.static('DatabaseProject/admin-panel'));
-app.use(express.static('DatabaseProject/admin-panel/Actors'));
-app.use(express.static('DatabaseProject/admin-panel/Admin'));
-app.use(express.static('DatabaseProject/admin-panel/Customers'));
-app.use(express.static('DatabaseProject/admin-panel/Dashboard'));
-app.use(express.static('DatabaseProject/admin-panel/Directors'));
-app.use(express.static('DatabaseProject/admin-panel/Episodes'));
-app.use(express.static('DatabaseProject/admin-panel/Feedbacks'));
-app.use(express.static('DatabaseProject/admin-panel/Movies'));
-app.use(express.static('DatabaseProject/admin-panel/Producers'));
-app.use(express.static('DatabaseProject/admin-panel/Profile'));
-app.use(express.static('DatabaseProject/admin-panel/Requests'));
-app.use(express.static('DatabaseProject/admin-panel/Series'));
-app.use(express.static('DatabaseProject/admin-panel/Subscribers'));
-app.use(express.static('DatabaseProject/admin-panel/Videos'));
 app.use(express.static('DatabaseProject/User/media-images'));
-app.use(express.static('DatabaseProject/other-images/Actors'));
-app.use(express.static('DatabaseProject/other-images/Admin'));
-app.use(express.static('DatabaseProject/other-images/Customers'));
-app.use(express.static('DatabaseProject/other-images/Directors'));
 app.use(express.static('DatabaseProject/other-images/Media'));
-app.use(express.static('DatabaseProject/other-images/Producers'));
 app.use(express.static("DatabaseProject/plugins"));
-app.use(express.static('DatabaseProject/other-images/Media/Movies'));
-app.use(express.static('DatabaseProject/other-images/Media/Series'));
 
 const port = 5000;
 
 // admin dashboard
-app.get('/landing-page.html', (req, res) => {
-    res.redirect("landing-page.html");
+app.get('/landing-page', (req, res) => {
+    res.render(path.join(__dirname, "/views/landing-page"));
 });
 
-app.get('/login', (req, res) => {
-    res.render(path.join(__dirname, "/views/login"));
+app.get('/user-panel-login', (req, res) => {
+    res.render(path.join(__dirname, "/views/user-panel-login"));
 });
 
 var data = {};
 //method to authorize login
-app.post('/login', (req, res) => {
+app.post('/user-panel-login', (req, res) => {
     const email = req.body.email;
     const pass = req.body.Password;
     oracledb.getConnection({
@@ -187,34 +165,176 @@ app.get('/admin-panel-feedbacks', (req, res) => {
     )
 });
 
+app.get('/admin-panel-producers', (req, res) => {
+    let producers;
+    oracledb.getConnection({
+        user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
+    }, function (error, conection) {
+            if (error) {
+                return console.error(error);
+            }
+            conection.execute(`SELECT NAME, GENDER, COUNT(*) AS MOVIES FROM PERSON JOIN PRODUCER ON PERSON.PERSON_ID = PRODUCER.PERSON_ID JOIN "produced-by" ON PERSON.PERSON_ID = "produced-by".PRODUCER_PERSON_ID JOIN MEDIA ON MEDIA.MEDIA_ID = "produced-by".MEDIA_MEDIA_ID GROUP BY NAME, GENDER`,
+            function (error, result) {
+                if (error) {
+                    return console.error(error);
+                }
+                producers = result.rows;
+                res.render(path.join(__dirname, "/views/admin-panel-producers"), {producers});
+                }
+            )
+        },
+    )
+});
+
+app.get('/admin-panel-directors', (req, res) => {
+    let directors;
+    oracledb.getConnection({
+        user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
+    }, function (error, conection) {
+            if (error) {
+                return console.error(error);
+            }
+            conection.execute(`SELECT NAME, GENDER, COUNT(*) AS MOVIES FROM PERSON JOIN DIRECTOR ON PERSON.PERSON_ID = DIRECTOR.PERSON_ID JOIN "directed-by" ON PERSON.PERSON_ID = "directed-by".DIRECTOR_PERSON_ID JOIN MEDIA ON MEDIA.MEDIA_ID = "directed-by".MEDIA_MEDIA_ID GROUP BY NAME, GENDER`,
+            function (error, result) {
+                if (error) {
+                    return console.error(error);
+                }
+                directors = result.rows;
+                res.render(path.join(__dirname, "/views/admin-panel-directors"), {directors});
+                }
+            )
+        },
+    )
+});
+
+app.get('/admin-panel-videos', (req, res) => {
+    let totalMovies = 0;
+    let totalSeries = 0;
+    let totalEpisodes = 0;
+    oracledb.getConnection({
+        user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
+    }, function (error, conection) {
+            if (error) {
+                return console.error(error);
+            }
+            conection.execute(`SELECT COUNT(*) FROM MOVIE`,
+            function (error, result) {
+                if (error) {
+                    return console.error(error);
+                }
+                totalMovies = result.rows;
+                }
+            )
+        },
+    )
+    
+    oracledb.getConnection({
+        user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
+    }, function (error, conection) {
+            if (error) {
+                return console.error(error);
+            }
+            conection.execute(`SELECT COUNT(*) FROM SERIES`,
+            function (error, result) {
+                if (error) {
+                    return console.error(error);
+                }
+                totalSeries = result.rows;
+                }
+            )
+        },
+    )
+    
+    oracledb.getConnection({
+        user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
+    }, function (error, conection) {
+            if (error) {
+                return console.error(error);
+            }
+            conection.execute(`SELECT COUNT(*) FROM EPISODE`,
+            function (error, result) {
+                if (error) {
+                    return console.error(error);
+                }
+                totalEpisodes = result.rows;
+                }
+            )
+        },
+    )
+    setTimeout(() => {
+        res.render(path.join(__dirname, "/views/admin-panel-videos"), {
+            totalEpisodes, totalSeries, totalMovies
+        }); 
+    }, 600);
+});
+
+app.get('/admin-panel-movies', (req, res) => {
+    let allMovies = {};
+    oracledb.getConnection({
+        user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
+    }, function (error, conection) {
+            if (error) {
+                return console.error(error);
+            }
+            conection.execute(`SELECT MEDIA_TITLE, DATE_RELEASED, RATING FROM MEDIA JOIN MOVIE ON MEDIA.MEDIA_ID = MOVIE.MEDIA_ID`,
+            function (error, result) {
+                if (error) {
+                    return console.error(error);
+                }
+                allMovies = result.rows;
+                res.render(path.join(__dirname, "/views/admin-panel-movies"), {allMovies});
+                }
+            )
+        },
+    )
+});
+
+app.get('/admin-panel-series', (req, res) => {
+    let allSeries = {};
+    oracledb.getConnection({
+        user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
+    }, function (error, conection) {
+            if (error) {
+                return console.error(error);
+            }
+            conection.execute(`SELECT MEDIA_TITLE, NO_OF_SEASONS, RATING FROM  MEDIA JOIN SERIES ON MEDIA.MEDIA_ID = SERIES.MEDIA_ID`,
+            function (error, result) {
+                if (error) {
+                    return console.error(error);
+                }
+                allSeries = result.rows;
+                res.render(path.join(__dirname, "/views/admin-panel-series"), {allSeries});
+                }
+            )
+        },
+    )
+});
+
+app.get('/admin-panel-episodes', (req, res) => {
+    let allEpisodes = {};
+    oracledb.getConnection({
+        user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
+    }, function (error, conection) {
+            if (error) {
+                return console.error(error);
+            }
+            conection.execute(`SELECT MEDIA_TITLE, EPISODE_TITLE, DATE_AIRED, SEASON_NO FROM SERIES JOIN MEDIA ON SERIES.MEDIA_ID = MEDIA.MEDIA_ID JOIN EPISODE ON SERIES.SERIES_ID = EPISODE.SERIES_ID`,
+            function (error, result) {
+                if (error) {
+                    return console.error(error);
+                }
+                allEpisodes = result.rows;
+                res.render(path.join(__dirname, "/views/admin-panel-episodes"), {allEpisodes});
+                }
+            )
+        },
+    )
+});
+
 app.get('/admin-panel-actors', (req, res) => {
     res.render(path.join(__dirname, "/views/admin-panel-actors"));
 });
 
-app.get('/admin-panel-directors', (req, res) => {
-    res.render(path.join(__dirname, "/views/admin-panel-directors"));
-});
-
-app.get('/admin-panel-episodes', (req, res) => {
-    res.render(path.join(__dirname, "/views/admin-panel-episodes"));
-});
-
-app.get('/admin-panel-movies', (req, res) => {
-    res.render(path.join(__dirname, "/views/admin-panel-movies"));
-});
-
-app.get('/admin-panel-producers', (req, res) => {
-    res.render(path.join(__dirname, "/views/admin-panel-producers"));
-});
-
-app.get('/admin-panel-series', (req, res) => {
-    res.render(path.join(__dirname, "/views/admin-panel-series"));
-});
-
-app.get('/admin-panel-videos', (req, res) => {
-    res.render(path.join(__dirname, "/views/admin-panel-videos"));
-});
-
 app.listen(port, () => {
-    console.log(`App listening at http://localhost:${port}/landing-page.html`);
+    console.log(`App listening at http://localhost:${port}/landing-page`);
 })

@@ -10,36 +10,28 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('DatabaseProject'));
 app.use(express.static('DatabaseProject/views'));
-app.use(express.static("DatabaseProject/User"))
+app.use(express.static('DatabaseProject/css'));
+app.use(express.static('DatabaseProject/js'));
 app.use(express.static('DatabaseProject/Media'));
-app.use(express.static('DatabaseProject/same-panels'));
 app.use(express.static('DatabaseProject/other-images'));
-app.use(express.static('DatabaseProject/User/user-panel/Play'));
-app.use(express.static('DatabaseProject/User/user-panel/Login'));
-app.use(express.static('DatabaseProject/User/user-panel/Profile'));
-app.use(express.static('DatabaseProject/User/user-panel/Lists'));
-app.use(express.static('DatabaseProject/User/user-panel/Others'));
-app.use(express.static('DatabaseProject/User/user-panel/Request Videos'));
-app.use(express.static('DatabaseProject/User/user-panel/Search Videos'));
-app.use(express.static('DatabaseProject/User/user-panel/Subscriptions'));
 
 const port = 4000;
 
 // landing page
-app.get('/landing-page.html', (req, res) => {
-    res.redirect("landing-page.html");
+app.get('/', (req, res) => {
+    res.render(path.join(__dirname, "/views/landing-page"));
 });
 
-app.get('/login', (req, res) => {
-    res.render(path.join(__dirname, "/views/login"));
+app.get('/user-panel-login', (req, res) => {
+    res.render(path.join(__dirname, "/views/user-panel-login"));
 });
 
-app.get('/user-panel-sign-up', (req, res) => {
-    res.render(path.join(__dirname, "/views/user-panel-sign-up"));
+app.get('/user-panel-signup', (req, res) => {
+    res.render(path.join(__dirname, "/views/user-panel-signup"));
 });
 
 // getting info from html fields
-app.post('/user-panel-sign-up', (req, res) => {
+app.post('/user-panel-signup', (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
     const password = req.body.pass;
@@ -78,7 +70,7 @@ app.post('/user-panel-sign-up', (req, res) => {
         //     )
         // }
     )
-    res.redirect('/user-panel-subscriptions')
+    res.redirect('/user-panel-subscription')
 });
 
 // method to add new user to database
@@ -106,7 +98,7 @@ function insertPersonInfo(id, name, gender, person_type) {
 
 var data = {};
 //method to authorize login
-app.post('/login', (req, res) => {
+app.post('/user-panel-login', (req, res) => {
     const email = req.body.email;
     const pass = req.body.Password;
     oracledb.getConnection({
@@ -359,6 +351,12 @@ app.get('/user-panel-play-series', (req, res) => {
     res.render(path.join(__dirname, '/views/user-panel-list'))
 })
 
+// new customer subscription page
+app.get('/user-panel-subscription', (req, res) => {
+    res.render(path.join(__dirname, '/views/user-panel-subscription'), {data})
+})
+
+//users own subscription
 app.get('/user-panel-subscriptions', (req, res) => {
     res.render(path.join(__dirname, '/views/user-panel-subscriptions'), {data})
 })
@@ -387,5 +385,5 @@ app.get('/user-panel-subscriptions', (req, res) => {
 // }
 
 app.listen(port, () => {
-    console.log(`App listening at http://localhost:${port}/landing-page.html`);
+    console.log(`App listening at http://localhost:${port}/`);
 })

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="landing-page.css">
+    <title>Home</title>
+    <link rel="icon" href="/other-images/logo.png" type="image/icon type">
+</head>
+<body>
+    <header class="showcase">
+        <div class="showcase-top">
+            <img src="/other-images/logo.png" alt="AEFlix Logo">
+        </div>
+        <div class="showcase-content">
+            <h1>Unlimited movies, TV shows and more.</h1>
+            <h3>All of AEFlix, starting at just Rs. 450.</h3>
+            <a href="#select-signin" class="btn btn-rounded" id = "btn1">Sign In</a>
+            <a href="#select-signup" class="btn btn-rounded" id = "btn2">Sign Up</a>
+
+            <!-- Pop up on sign in  -->
+            <div class="popup" id="select-signin">
+                <div class="wrapper">
+                    <h2>SIGNING IN</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <div class="content-container">
+                            <form id="form">
+                                <div class="name">
+                                    <label>Sign-in Option</label> 
+                                    <select onchange="location = this.options[this.selectedIndex].value;">
+                                        <option selected disabled hidden>Choose</option>
+                                        <option value="admin-panel-login">Admin</option>
+                                        <option value="user-panel-login">Customer</option>
+                                    </select>
+                                </div>                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pop up on sign up  -->
+            <div class="popup" id="select-signup">
+                <div class="wrapper">
+                    <h2>SIGNING UP</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <div class="content-container">
+                            <form>
+                                <div class="name">
+                                    <label>Sign-up Option</label> 
+                                    <select onchange="location = this.options[this.selectedIndex].value;">
+                                        <option selected disabled hidden>Choose</option>
+                                        <option value="admin-panel-signup">Admin</option>
+                                        <option value="user-panel-signup">Customer</option>
+                                    </select>
+                                </div>                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="landing-page.js"></script>
+</body>
+</html>

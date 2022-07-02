@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">     
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="user-panel-profile.css">
     <link rel="icon" href="/other-images/logo.png" type="image/icon type">
-    <title>Profile</title> 
+    <title>Profile</title>
 </head>
+
 <body>
     <div class="container">
         <aside>
@@ -22,31 +24,45 @@
 
             <div class="sidebar">
                 <!-- Profile -->
-                <a href="" class="active"><span class="material-icons" >person</span><h3>Your Profile</h3></a>
- 
+                <a href="" class="active"><span class="material-icons">person</span>
+                    <h3>Your Profile</h3>
+                </a>
+
                 <!-- Subscriptions -->
-                <a href="user-panel-subscriptions" ><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
- 
+                <a href="user-panel-subscriptions"><span class="material-icons">subscriptions</span>
+                    <h3>Subscriptions</h3>
+                </a>
+
                 <!-- Search Videos -->
-                <a href="user-panel-search" ><span class="material-icons">search</span><h3>Search Videos</h3></a>
- 
+                <a href="user-panel-search"><span class="material-icons">search</span>
+                    <h3>Search Videos</h3>
+                </a>
+
                 <!-- Request Videos -->
-                <a href="user-panel-request" ><span class="material-icons">mail</span><h3>Request Videos</h3></a>
- 
+                <a href="user-panel-request"><span class="material-icons">mail</span>
+                    <h3>Request Videos</h3>
+                </a>
+
                 <!-- Playlist -->
-                <a href="user-panel-list" ><span class="material-icons">playlist_play</span><h3>Your Lists</h3></a>
- 
+                <a href="user-panel-list"><span class="material-icons">playlist_play</span>
+                    <h3>Your Lists</h3>
+                </a>
+
                 <!-- Others-->
-                <a href="user-panel-others" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
- 
+                <a href="user-panel-others"><span class="material-icons">contact_support</span>
+                    <h3>Others</h3>
+                </a>
+
                 <!-- Log Out -->
-                <a href="/same-panels/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            
+                <a href="/same-panels/landing-page.html"><span class="material-icons">logout</span>
+                    <h3>Log Out</h3>
+                </a>
             </div>
         </aside>
 
         <!-- --------------------- END OF ASIDE ---------------------------- -->
         <main>
-            <h1>Profile Information</h1> 
+            <h1>Profile Information</h1>
 
             <div class="profile-info">
                 <div class="profile-pic">
@@ -56,15 +72,15 @@
                     </div>
                     <div class="pic-btn">
                         <div class="change-btn">
-                            <a href="#change-pic"><span>Change Picture</span></a>                        
+                            <a href="#change-pic"><span>Change Picture</span></a>
                         </div>
                         <div class="remove-btn">
-                            <a href="#remove-pic"><span>Remove Picture</span></a>                        
+                            <a href="#remove-pic"><span>Remove Picture</span></a>
                         </div>
                     </div>
-                 </div>
+                </div>
 
-                 <!-- Change picture -->
+                <!-- Change picture -->
                 <div class="popup" id="change-pic">
                     <div class="wrapper">
                         <h2>CHANGING PICTURE</h2>
@@ -76,7 +92,7 @@
                                         <label>Your Profile Picture</label>
                                         <div id="display-image"></div>
                                         <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
-                                    </div>                                         
+                                    </div>
                                     <input type="submit" value="Save Changes">
                                 </form>
                             </div>
@@ -106,31 +122,39 @@
                         <tr>
                             <td>Name</td>
                             <td>
-                                <%= data[1] %> 
+                                <%= data[1] %>
                             </td>
                         </tr>
-                        
+
                         <tr>
                             <td>Password</td>
-                            <td> 
-                                <%= data[2] %> 
+                            <td>
+                                <%= data[2] %>
                             </td>
                         </tr>
                         <tr>
                             <td>Email Address</td>
-                            <td> <%= data[3] %> </td>
+                            <td>
+                                <%= data[3] %>
+                            </td>
                         </tr>
                         <tr>
                             <td>Contact</td>
-                            <td> <%= data[4] %> </td>
+                            <td>
+                                <%= data[4] %>
+                            </td>
                         </tr>
                         <tr>
                             <td>Gender</td>
-                            <td> <%= data[5] %> </td>
+                            <td>
+                                <%= data[5] %>
+                            </td>
                         </tr>
                         <tr>
                             <td>Date of Birth</td>
-                            <td> <%= data[6] %> </td>
+                            <td>
+                                <%= data[6] %>
+                            </td>
                         </tr>
                     </table>
                     <div class="profile-btn">
@@ -174,12 +198,12 @@
                                         </div>
 
                                         <div class="gender">
-                                            <label>Gender</label> 
-                                            <select  id="gender-spec">
+                                            <label>Gender</label>
+                                            <select id="gender-spec">
                                                 <option value="Male">Male</option>
                                                 <option selected value="Female">Female</option>
                                             </select>
-                                        </div>                                
+                                        </div>
                                         <input type="submit" value="Save Changes">
                                     </form>
                                 </div>
@@ -189,12 +213,13 @@
                 </div>
             </div>
             <!------------------------END OF INSIGHTS ------------------------>
-        </main>                  
-        </div>
-        <!------------------------------ END OF MAIN ------------------------->
+        </main>
+    </div>
+    <!------------------------------ END OF MAIN ------------------------->
     </div>
     <script src="admin-panel-profile.js">
         localStorage.setItem("userID", data[0]);
     </script>
 </body>
+
 </html>

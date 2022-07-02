@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="/user-panel/Login/user-panel-login.css">
+    <link rel="stylesheet" href="user-panel-login.css">
     <link rel="icon" href="/other-images/logo.png" type="image/icon type">
          
     <title>Customer Login</title>
@@ -24,17 +24,17 @@
                 <span class="title">Login</span>
 
                 <!-- Next Link after clicking Login-->
-                <form action="#">
+                <form action="#" method="post">
 
                     <!-- Email text field -->
                     <div class="input-field">
-                        <input type="text" placeholder="Enter your email" required>
+                        <input type="text" name="email" placeholder="Enter your email" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
 
                     <!-- Password text field -->
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <input type="password" name="Password" class="password" placeholder="Enter your password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
@@ -44,10 +44,10 @@
                     <div class="input-field button">
 
                         <!-- In case of correct input -->
-                        <!-- <a href="/user-panel/Profile/user-panel-profile.html"><input type="button" value="Login" id="loginBtn"></a> -->
+                        <a href="user-panel-profile"><input type="submit" value="Login" id="loginBtn"></a>
 
                         <!-- In case of wrong input -->
-                        <a href="#redirect"><input type="button" value="Login" id="loginBtn"></a>
+                        <a href="#redirect"><input type="submit" value="Login" id="loginBtn"></a>
                     </div>
 
                     <!-- Redirecting to home page popup in case  of no user or subscriber found-->
@@ -59,8 +59,8 @@
                                     <span>It seems like no such account exists or</span>
                                     <span>your subscription has expired!</span>
                                     <div class="confirmation">
-                                        <a href="/user-panel/Login/user-panel-login.html" id="yes">Try Again</a>
-                                        <a href="/same-panels/landing-page.html" id="no">Go to Homepage</a>
+                                        <a href="user-panel-login" id="yes">Try Again</a>
+                                        <a href="landing-page" id="no">Go to Homepage</a>
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
     </div>
 
     <!-- JS link -->
-    <script src="/user-panel/Login/user-panel-login.js"></script>
+    <script src="user-panel-login.js"></script>
 
 </body>
 </html>
