@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const oracledb = require('oracledb');
+const { DATE } = require('oracledb');
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:false}));
@@ -342,24 +343,78 @@ const port = 4000;
 // // );
 // // console.log(result.rows);
 
-var dateString = new Date();
-console.log(dateString.toDateString());
+// var dateString = new Date();
+// console.log(dateString.toDateString());
 
-let totalEpisodes = 0;
-oracledb.getConnection({
-    user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
-}, function (error, conection) {
-        if (error) {
-            return console.error(error);
-        }
-        conection.execute(`SELECT COUNT(*) FROM EPISODE`,
-        function (error, result) {
-            if (error) {
-                return console.error(error);
-            }
-            totalEpisodes = result.rows;
-            console.log(totalEpisodes[0][0]);
-            }
-        )
-    },
-)
+// var next = new Date();
+// next.setDate(new Date().getDate() + 7);
+// console.log(next.toDateString().split(' ').slice(1).join(' '));
+
+let month = 7;
+let year = 2022;
+let aa = new Date();
+let cardExp = new Date(year, month - 1, aa.getDate() + 1);
+console.log(cardExp.toDateString());
+
+//console.log(dateString.getDate() + 7, dateString.getUTCMonth(), dateString.getFullYear());
+
+// let totalEpisodes = 0;
+// oracledb.getConnection({
+//     user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
+// }, function (error, conection) {
+//         if (error) {
+//             return console.error(error);
+//         }
+//         conection.execute(`SELECT COUNT(*) FROM EPISODE`,
+//         function (error, result) {
+//             if (error) {
+//                 return console.error(error);
+//             }
+//             totalEpisodes = result.rows;
+//             console.log(totalEpisodes[0][0]);
+//             }
+// //         )
+// //     },
+// // )
+
+// let email = "ash162@gmail.com";
+// let pass = 'Ashsimps';
+// oracledb.getConnection({
+//     user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
+// }, function (error, connection) {
+//     if (error) {
+//         return console.error(error);
+//     }
+//     connection.execute('SELECT CUSTOMER.CUSTOMER_ID, name, password, email, CONTACT, GENDER, DATE_CREATED,SUBSCRIPTION_TYPE,PAYMENT_METHOD,CARD_NO,SECURITY_CODE,CARDEXPIRY_DATE,END_DATE FROM customer JOIN PERSON ON CUSTOMER.PERSON_ID = PERSON.PERSON_ID AND EMAIL = :e  AND PASSWORD = :p JOIN subscription ON subscription.customer_id = customer.customer_id WHERE subscription.end_date>current_date',
+//     [email, pass],
+//     function (error, result) {
+//         if (error) console.error(error);
+//             var length = result.rows.length;
+//             if (length != 0) {
+//                 data = result.rows;
+//                 console.log(data);
+//                 //res.render(path.join(__dirname, '/views/user-panel-profile'), {data});
+//             }
+//         }
+//     )
+// })
+
+
+// oracledb.getConnection({
+//     user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
+// }, function (error, connection) {
+//     if (error) {
+//         return console.error(error);
+//     }
+//     connection.execute('SELECT SUBSCRIPTION_TYPE, PAYMENT_METHOD, END_DATE FROM SUBSCRIPTION WHERE CUSTOMER_ID = :e',
+//     ["C2"],
+//     function (error, result) {
+//         if (error) console.error(error);
+//             var length = result.rows.length;
+//             if (length != 0) {
+//                 data = result.rows;
+//                 console.log(data);
+//             }
+//         }
+//     )
+// })

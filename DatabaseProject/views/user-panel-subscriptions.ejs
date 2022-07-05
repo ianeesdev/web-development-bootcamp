@@ -41,7 +41,7 @@
                 <a href="user-panel-others" ><span class="material-icons">contact_support</span><h3>Others</h3></a>
                 
                 <!-- Log Out -->
-                <a href="/same-panels/landing-page.html" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            
+                <a href="landing-page" ><span class="material-icons">logout</span><h3>Log Out</h3></a>            
             </div>
         </aside>
 
@@ -73,11 +73,11 @@
                     </tr>
                     <tr>
                         <td>Card Expiry Date</td>
-                        <td><%= data[11] %> </td>
+                        <td><%= data[11].toDateString() %> </td>
                     </tr>
                     <tr>
                         <td>Package Expiry Date</td>
-                        <td><%= data[12] %> </td>
+                        <td><%= data[12].toDateString() %> </td>
                     </tr>
                 </table>
             </div>
@@ -91,45 +91,25 @@
                                 <th>Package</th>
                                 <th>Payment</th>
                                 <th>Date</th>
-                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Eesha Shahid</td>
-                                <td class="success">Basic</td>
-                                <td>Debit</td>
-                                <td>10/06/22</td>
-                                <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
-                            </tr>
-                            <tr>
-                                <td>Eesha Shahid</td>
-                                <td class="success">Basic</td>
-                                <td>Debit</td>
-                                <td>02/02/22</td>
-                                <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
-                            </tr>
-                            <tr>
-                                <td>Eesha Shahid</td>
-                                <td class="warning">Standard</td>
-                                <td>Debit</td>
-                                <td>23/12/21</td>
-                                <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
-                            </tr>
-                            <tr>
-                                <td>Shahid Raza</td>
-                                <td class="danger">Premium</td>
-                                <td>Credit</td>
-                                <td>15/10/21</td>
-                                <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
-                            </tr>
-                            <tr>
-                                <td>Eesha Shahid</td>
-                                <td class="warning">Standard</td>
-                                <td>Debit</td>
-                                <td>04/09/21</td>
-                                <td class="action"><span class="material-symbols-sharp">more_vert</span></td>
-                            </tr>
+                            <%for (let i = 0; i < subscriptionData.length; i++) {%>
+                                <tr>
+                                    <td><%= data[1] %> </td>
+                                    <% if (subscriptionData[i][0] == 'Premium') {%> 
+                                        <td class="danger"><%= subscriptionData[i][0]%></td>
+                                    <%}%>
+                                    <% if (subscriptionData[i][0] == 'Basic') {%>
+                                        <td class="success"><%= subscriptionData[i][0]%></td>
+                                    <%}%>
+                                    <% if (subscriptionData[i][0] == 'Standard') {%>
+                                        <td class="warning"><%= subscriptionData[i][0]%></td>
+                                    <%}%>
+                                    <td><%= subscriptionData[i][1]%></td>
+                                    <td><%= subscriptionData[i][2].toDateString()%></td>
+                                </tr>
+                            <%}%>
                         </tbody>
                     </table>
                 </div>

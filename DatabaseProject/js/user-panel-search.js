@@ -33,3 +33,10 @@ function openNav() {
     console.log("Close");
     document.getElementById("myNav").style.width = "0%";
   }
+
+// Changing send button
+document.getElementById('add-to-playlist').onclick= change;
+function change(){
+  this.value ="Video added!";
+  this.style.backgroundColor="green";
+}

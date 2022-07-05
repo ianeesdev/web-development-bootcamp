@@ -1,5 +1,6 @@
-for (var i = 0; i < res.length; i++) {
-                    for (var j = 0; j < res[i].length; j++) {
-                        console.log(res[i][j])
-                    }
-                }
+var dateString = new Date();
+// console.log(dateString.toDateString());
+
+// var next = new Date();
+// next.setDate(new Date().getDate() + 7);
+// console.log(next.toDateString().split(' ').slice(1).join(' '));

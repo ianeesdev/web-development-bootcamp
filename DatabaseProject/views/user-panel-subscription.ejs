@@ -14,20 +14,20 @@
 
 <div class="container">
     <div class="title">Card Details</div>
-    <form action="user-panel-profile">
+    <form action="#" method="post">
         <div class="inputBox">
             <span>Card number</span>
-            <input type="text" maxlength="16" class="card-number-input">
+            <input type="text" name="card_no" maxlength="16" class="card-number-input">
         </div>
         <div class="inputBox">
             <span>Card holder</span>
-            <input type="text" class="card-holder-input">
+            <input type="text" name="card_holder" class="card-holder-input">
         </div>
         <div class="flexbox">
             <div class="inputBox">
                 <span>Expiration Month</span>
-                <select name="" id="" class="month-input">
-                    <option value="month" selected disabled>month</option>
+                <select name="month" id="" class="month-input">
+                    <option value="" selected>month</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
                     <option value="03">03</option>
@@ -44,8 +44,8 @@
             </div>
             <div class="inputBox">
                 <span>Expiration Year</span>
-                <select name="" id="" class="year-input">
-                    <option value="year" selected disabled>year</option>
+                <select name="year" id="" class="year-input">
+                    <option value="" selected>year</option>
                     <option value="2021">2021</option>
                     <option value="2022">2022</option>
                     <option value="2023">2023</option>
@@ -60,14 +60,14 @@
             </div>
             <div class="inputBox">
                 <span>CVV</span>
-                <input type="text" maxlength="4" class="cvv-input">
+                <input type="text" name="cvv_no" maxlength="4" class="cvv-input">
             </div>
         </div>
         <div class="flexbox2">
             <div class="inputBox">
                 <span>Subscription Type</span>
-                <select name="" id="" class="month-input">
-                    <option value="month" selected disabled>type</option>
+                <select name="type" id="" class="month-input">
+                    <option value="" selected>type</option>
                     <option value="Basic">Basic for Rs.450 Weekly</option>
                     <option value="Standard">Standard for Rs.800 Monthly</option>
                     <option value="Premium">Premium for Rs.1500 Annually</option>
