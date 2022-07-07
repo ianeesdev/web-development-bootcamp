@@ -142,11 +142,13 @@
                     <tbody>
                         <%for (let i = 0; i < cust_Data.length; i++) {%>
                             <tr>
-                                <td><%= cust_Data[i][0]%></td>
                                 <td><%= cust_Data[i][1]%></td>
                                 <td><%= cust_Data[i][2]%></td>
                                 <td><%= cust_Data[i][3]%></td>
-                                <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
+                                <td><%= cust_Data[i][4]%></td>
+                                <td class="action">
+                                    <a href="admin-panel-customers/<%= cust_Data[i][0]%>" onclick="return confirm('Are you sure you want to delete this item?')"><span>Delete</span></a>
+                                </td>
                             </tr>
                         <%}%>
                     </tbody>

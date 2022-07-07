@@ -92,17 +92,17 @@
                     <tbody>
                         <%for (let i = 0; i < reqData.length; i++) {%>
                             <tr>
-                                <td><%= reqData[i][0]%></td>
                                 <td><%= reqData[i][1]%></td>
-                                <td><%= reqData[i][2].toDateString()%></td>
-                                <% if (reqData[i][3] == 'Pending') {%> 
-                                    <td class="danger"><%= reqData[i][3]%></td>
+                                <td><%= reqData[i][2]%></td>
+                                <td><%= reqData[i][3].toDateString()%></td>
+                                <% if (reqData[i][4] == 'Pending') {%> 
+                                    <td class="danger"><%= reqData[i][4]%></td>
                                 <%}%>
-                                <% if (reqData[i][3] == 'Approved') {%>
-                                    <td class="success"><%= reqData[i][3]%></td>
+                                <% if (reqData[i][4] == 'Approved') {%>
+                                    <td class="success"><%= reqData[i][4]%></td>
                                 <%}%>
                                 <td class="action">
-                                    <a href="#divOne2"><span style="cursor:pointer" onclick="openNav()">Delete</span></a>
+                                    <a href="admin-panel-requests/<%= reqData[i][0]%>" onclick="return confirm('Are you sure you want to delete this item?')"><span>Delete</span></a>
                                 </td>  
                             </tr>
                         <%}%>

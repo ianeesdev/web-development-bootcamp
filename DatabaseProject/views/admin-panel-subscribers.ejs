@@ -146,21 +146,23 @@
                     <tbody>
                         <%for (let i = 0; i < subscription_data.length; i++) {%>
                             <tr>
-                                <td><%= subscription_data[i][0]%></td>
                                 <td><%= subscription_data[i][1]%></td>
                                 <td><%= subscription_data[i][2]%></td>
                                 <td><%= subscription_data[i][3]%></td>
-                                <% if (subscription_data[i][4] == 'Premium') {%> 
-                                    <td class="danger"><%= subscription_data[i][4]%></td>
+                                <td><%= subscription_data[i][4]%></td>
+                                <% if (subscription_data[i][5] == 'Premium') {%> 
+                                    <td class="danger"><%= subscription_data[i][5]%></td>
                                 <%}%>
-                                <% if (subscription_data[i][4] == 'Basic') {%>
-                                    <td class="success"><%= subscription_data[i][4]%></td>
+                                <% if (subscription_data[i][5] == 'Basic') {%>
+                                    <td class="success"><%= subscription_data[i][5]%></td>
                                 <%}%>
-                                <% if (subscription_data[i][4] == 'Standard') {%>
-                                    <td class="warning"><%= subscription_data[i][4]%></td>
+                                <% if (subscription_data[i][5] == 'Standard') {%>
+                                    <td class="warning"><%= subscription_data[i][5]%></td>
                                 <%}%>
-                                <td><%= subscription_data[i][5].toDateString()%></td>
-                                <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
+                                <td><%= subscription_data[i][6].toDateString()%></td>
+                                <td class="action">
+                                    <a href="admin-panel-subscribers/<%= subscription_data[i][0]%>" onclick="return confirm('Are you sure you want to delete this item?')"><span>Delete</span></a>
+                                </td>
                             </tr>
                         <%}%>
                     </tbody>

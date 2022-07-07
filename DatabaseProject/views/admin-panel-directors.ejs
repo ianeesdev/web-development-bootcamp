@@ -77,20 +77,20 @@
                     <a class="close" href="#">&times;</a>
                     <div class="content">
                         <div class="content-container">
-                            <form>
+                            <form action="#" method="post">
                                 <div class="name">
                                     <label>Director Name</label>
-                                    <input placeholder="Enter actor name" type="text">
+                                    <input placeholder="Enter director name" name="name" type="text">
                                 </div>
                                 <div class="gender">
                                     <label>Gender</label> 
-                                    <select  id="gender-spec">
-                                        <option selected disabled hidden>Choose gender</option>
+                                    <select name="picker" id="gender-spec">
+                                        <option value="" selected >Choose gender</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                       </select>
-                                </div>                                
-                                <input type="submit" value="Add Director">
+                                </div>
+                                <input type="submit" value="Add Director">                          
                             </form>
                         </div>
                     </div>
@@ -121,12 +121,12 @@
                     <tbody>
                         <%for (let i = 0; i < directors.length; i++) {%>
                             <tr>
-                                <td><%= directors[i][0]%></td>
                                 <td><%= directors[i][1]%></td>
                                 <td><%= directors[i][2]%></td>
+                                <td><%= directors[i][3]%></td>
                                 <td class="action">
-                                    <a href="#update-producer"><span>Update</span></a>
-                                    <a href="#remove-producer"><span>Delete</span></a>
+                                    <a href="#update-director"><span>Update</span></a>
+                                    <a href="admin-panel-directors/<%= directors[i][0]%>" onclick="return confirm('Are you sure you want to delete this item?')"><span>Delete</span></a>
                                 </td>
                             </tr>
                         <%}%>

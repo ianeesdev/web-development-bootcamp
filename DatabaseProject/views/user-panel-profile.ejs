@@ -121,40 +121,27 @@
                     <table>
                         <tr>
                             <td>Name</td>
-                            <td>
-                                <%= data[1] %>
-                            </td>
+                            <td><%= data[1] %></td>
                         </tr>
-
                         <tr>
                             <td>Password</td>
-                            <td>
-                                <%= data[2] %>
-                            </td>
+                            <td><%= data[2] %></td>
                         </tr>
                         <tr>
                             <td>Email Address</td>
-                            <td>
-                                <%= data[3] %>
-                            </td>
+                            <td><%= data[3] %></td>
                         </tr>
                         <tr>
                             <td>Contact</td>
-                            <td>
-                                <%= data[4] %>
-                            </td>
+                            <td><%= data[4] %></td>
                         </tr>
                         <tr>
                             <td>Gender</td>
-                            <td>
-                                <%= data[5] %>
-                            </td>
+                            <td><%= data[5] %></td>
                         </tr>
                         <tr>
                             <td>Date of Birth</td>
-                            <td>
-                                <%= data[6].toDateString() %>
-                            </td>
+                            <td><%= data[6].toDateString() %></td>
                         </tr>
                     </table>
                     <div class="profile-btn">
@@ -173,35 +160,36 @@
                                             <label>Full Name</label>
 
                                             <!-- Current Name will be fetched and placed here -->
-                                            <input value="Eesha Shahid" type="text">
+                                            <input value="<%= data[1] %>" type="text">
                                         </div>
 
                                         <div class="password">
                                             <label>Password</label>
 
                                             <!-- Current Name will be fetched and placed here -->
-                                            <input value="eesha123" type="text">
+                                            <input value="<%= data[2] %>" type="text">
                                         </div>
 
                                         <div class="email">
                                             <label>Email</label>
 
                                             <!-- Current Name will be fetched and placed here -->
-                                            <input value="eesha.shahid14@gmail.com" type="text">
+                                            <input value="<%= data[3] %>" type="text">
                                         </div>
 
                                         <div class="contact">
                                             <label>Contact</label>
 
                                             <!-- Current Name will be fetched and placed here -->
-                                            <input value="0338-111774" type="text">
+                                            <input value="<%= data[4] %>" type="text">
                                         </div>
 
                                         <div class="gender">
-                                            <label>Gender</label>
-                                            <select id="gender-spec">
+                                            <label>Gender</label> 
+                                            <select name="picker" id="gender-spec">
+                                                <option value="" selected>Select gender</option>
                                                 <option value="Male">Male</option>
-                                                <option selected value="Female">Female</option>
+                                                <option value="Female">Female</option>
                                             </select>
                                         </div>
                                         <input type="submit" value="Save Changes">

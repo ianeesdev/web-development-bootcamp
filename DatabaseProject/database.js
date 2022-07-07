@@ -358,24 +358,24 @@ console.log(cardExp.toDateString());
 
 //console.log(dateString.getDate() + 7, dateString.getUTCMonth(), dateString.getFullYear());
 
-// let totalEpisodes = 0;
-// oracledb.getConnection({
-//     user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
-// }, function (error, conection) {
-//         if (error) {
-//             return console.error(error);
-//         }
-//         conection.execute(`SELECT COUNT(*) FROM EPISODE`,
-//         function (error, result) {
-//             if (error) {
-//                 return console.error(error);
-//             }
-//             totalEpisodes = result.rows;
-//             console.log(totalEpisodes[0][0]);
-//             }
-// //         )
-// //     },
-// // )
+let totalEpisodes;
+oracledb.getConnection({
+    user: 'dbProject', password: 'anees', connectString: 'localhost/orcl'
+}, function (error, conection) {
+        if (error) {
+            return console.error(error);
+        }
+        conection.execute(`SELECT COUNT(*) FROM EPISODE`,
+        function (error, result) {
+            if (error) {
+                return console.error(error);
+            }
+            totalEpisodes = result.rows;
+            console.log("P" + (totalEpisodes[0][0] + 50));
+            }
+        )
+    },
+)
 
 // let email = "ash162@gmail.com";
 // let pass = 'Ashsimps';

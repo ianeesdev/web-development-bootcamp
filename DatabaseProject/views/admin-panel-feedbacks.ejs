@@ -90,11 +90,11 @@
                     <tbody>
                         <%for (let i = 0; i < feedbacks.length; i++) {%>
                             <tr>
-                                <td><%= feedbacks[i][0]%></td>
                                 <td><%= feedbacks[i][1]%></td>
-                                <td><%= feedbacks[i][2].toDateString().split(' ').slice(1).join(' ')%></td>
+                                <td><%= feedbacks[i][2]%></td>
+                                <td><%= feedbacks[i][3].toDateString().split(' ').slice(1).join(' ')%></td>
                                 <td class="action">
-                                    <a href="#divOne2"><span style="cursor:pointer" onclick="openNav()">Delete</span></a>
+                                    <a href="admin-panel-feedbacks/<%= feedbacks[i][0]%>" onclick="return confirm('Are you sure you want to delete this item?')"><span>Delete</span></a>
                                 </td>
                             </tr>
                         <%}%>

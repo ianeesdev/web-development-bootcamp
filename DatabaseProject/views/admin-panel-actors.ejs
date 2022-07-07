@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">      
-    <link rel="stylesheet" href="admin-panel-actors.css">
+    <link rel="stylesheet" href="admin-panel-table.css">
     <link rel="icon" href="logo.png" type="image/icon type">
     <title>Admin Panel</title>
 </head>
@@ -77,20 +77,20 @@
                     <a class="close" href="#">&times;</a>
                     <div class="content">
                         <div class="content-container">
-                            <form>
+                            <form action="#" method="post">
                                 <div class="name">
                                     <label>Actor Name</label>
-                                    <input placeholder="Enter actor name" type="text">
+                                    <input placeholder="Enter actor name" name="name" type="text">
                                 </div>
                                 <div class="gender">
                                     <label>Gender</label> 
-                                    <select  id="gender-spec">
-                                        <option selected disabled hidden>Choose gender</option>
+                                    <select name="picker" id="gender-spec">
+                                        <option value="" selected >Choose gender</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                       </select>
-                                </div>                                
-                                <input type="submit" value="Add Actor">
+                                </div>
+                                <input type="submit" value="Add Actor">                          
                             </form>
                         </div>
                     </div>
@@ -192,119 +192,37 @@
                 </div>
             </div>
 
-            <div class="card-container" >
-                <div class="card-item" style="cursor:pointer" onclick="openNav()">
-                    <div class="card-inner">        
-                        <img src="Aaron Eckhart.jpg" alt="">
-                        <div class="name">
-                            <h2>Blake Lively</h2>
-                        </div>
-                        <div class="gender">
-                            <span>Female</span>
-                        </div>  
-                    </div>
-                </div>
-
-
-                <div class="card-item" style="cursor:pointer" onclick="openNav()">
-                    <div class="card-inner">        
-                        <img src="Alexa Demie.jpg" alt="">
-                        <div class="name">
-                            <h2>Blake Lively</h2>
-                        </div>
-                        <div class="gender">
-                                <span>Female</span>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="card-item" style="cursor:pointer" onclick="openNav()">
-                    <div class="card-inner">        
-                        <img src="Angus Cloud.jpg" alt="">
-                        <div class="name">
-                            <h2>Blake Lively</h2>
-                        </div>
-                        <div class="gender">
-                                <span>Female</span>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="card-item" style="cursor:pointer" onclick="openNav()">
-                    <div class="card-inner">        
-                        <img src="Ansel Elgort.jpg" alt="">
-                        <div class="name">
-                            <h2>Blake Lively</h2>
-                        </div>
-                        <div class="gender">
-                                <span>Female</span>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="card-item" style="cursor:pointer" onclick="openNav()">
-                    <div class="card-inner">        
-                        <img src="Anupam-Tripathi.png" alt="">
-                        <div class="name">
-                            <h2>Blake Lively</h2>
-                        </div>
-                        <div class="gender">
-                                <span>Female</span>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="card-item" style="cursor:pointer" onclick="openNav()">
-                    <div class="card-inner">        
-                        <img src="Anya Taylor-Joy.png" alt="">
-                        <div class="name">
-                            <h2>Blake Lively</h2>
-                        </div>
-                        <div class="gender">
-                                <span>Female</span>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="card-item" style="cursor:pointer" onclick="openNav()">
-                    <div class="card-inner">        
-                        <img src="Barbie Ferreira.jpg" alt="">
-                        <div class="name">
-                            <h2>Blake Lively</h2>
-                        </div>
-                        <div class="gender">
-                                <span>Female</span>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="card-item" style="cursor:pointer" onclick="openNav()">
-                    <div class="card-inner">        
-                        <img src="Bryce Dallas Howard.jpg" alt="">
-                        <div class="name">
-                            <h2>Blake Lively</h2>
-                        </div>
-                        <div class="gender">
-                                <span>Female</span>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="card-item" style="cursor:pointer" onclick="openNav()">
-                    <div class="card-inner">        
-                        <img src="Cade-Woodward.jpg" alt="">
-                        <div class="name">
-                            <h2>Blake Lively</h2>
-                        </div>
-                        <div class="gender">
-                                <span>Female</span>
-                        </div>  
-                    </div>
-                </div>
-
-                
+            <div class="table-data">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Title</th>
+                            <th>Character Name</th>
+                            <th>Media Type</th>
+                            <th>Rating</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <%for (let i = 0; i < actors.length; i++) {%>
+                            <tr>
+                                <td><%= actors[i][1]%></td>
+                                <td><%= actors[i][2]%></td>
+                                <td><%= actors[i][3]%></td>
+                                <td><%= actors[i][4]%></td>
+                                <td><%= actors[i][5]%></td>
+                                <td><%= actors[i][6]%></td>
+                                <td class="action">
+                                    <a href="#update-producer"><span>Update</span></a>
+                                    <a href="admin-panel-actors/<%= actors[i][0]%>" onclick="return confirm('Are you sure you want to delete this item?')"><span>Delete</span></a>
+                                </td>
+                            </tr>
+                        <%}%>
+                    </tbody>
+                </table>
             </div>
-
         </main>      
         <!------------------------------ END OF MAIN ------------------------->
     </div>

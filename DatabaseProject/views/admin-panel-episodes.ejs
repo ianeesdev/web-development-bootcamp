@@ -318,11 +318,14 @@
                     <tbody>
                         <%for (let i = 0; i < allEpisodes.length; i++) {%>
                             <tr>
-                                <td><%= allEpisodes[i][0]%></td>
                                 <td><%= allEpisodes[i][1]%></td>
-                                <td><%= allEpisodes[i][2].toDateString().split(' ').slice(1).join(' ')%></td>
-                                <td><%= allEpisodes[i][3]%></td>
-                                <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
+                                <td><%= allEpisodes[i][2]%></td>
+                                <td><%= allEpisodes[i][3].toDateString().split(' ').slice(1).join(' ')%></td>
+                                <td><%= allEpisodes[i][4]%></td>
+                                <td class="action">
+                                    <a href="#update-episode"><span>Update</span></a>
+                                    <a href="admin-panel-episodes/<%= allEpisodes[i][0]%>" onclick="return confirm('Are you sure you want to delete this item?')"><span>Delete</span></a>
+                                </td>
                             </tr>
                         <%}%>
                     </tbody>

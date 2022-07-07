@@ -82,10 +82,10 @@
                         <tbody>
                             <%for (let i=0; i < favlist.length; i++) {%>
                                 <tr>
-                                    <td><%= favlist[i][0]%></td>
-                                    <td><%= favlist[i][1].toDateString()%></td>
+                                    <td><%= favlist[i][1]%></td>
+                                    <td><%= favlist[i][2].toDateString()%></td>
                                     <td class="action">
-                                        <a href="#remove-fav"><span id="delete" style="cursor:pointer">Remove</span></a>
+                                        <a href="user-panel-list/fav/<%= favlist[i][0]%>" onclick="return confirm('Are you sure you want to delete this item?')"><span id="delete" style="cursor:pointer">Remove</span></a>
                                         <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
                                     </td>
                                 </tr>
@@ -131,12 +131,12 @@
                         <tbody>
                             <%for (let i=0; i < playlist.length; i++) {%>
                                 <tr>
-                                    <td><%= playlist[i][0]%></td>
                                     <td><%= playlist[i][1]%></td>
-                                    <td><%= playlist[i][2].toDateString()%></td>
+                                    <td><%= playlist[i][2]%></td>
+                                    <td><%= playlist[i][3].toDateString()%></td>
                                     <td class="action">
                                         <a href="#edit-list"><span id="edit" style="cursor:pointer">Edit</span></a>
-                                        <a href="#del-list"><span id="delete" style="cursor:pointer">Delete</span></a>
+                                        <a href="user-panel-list/list/<%= playlist[i][0]%>" onclick="return confirm('Are you sure you want to delete this item?')"><span id="delete" style="cursor:pointer">Remove</span></a>
                                         <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
                                     </td>
                                 </tr>
@@ -220,11 +220,10 @@
                         <tbody>
                             <%for (let i=0; i < watchLater.length; i++) {%>
                                 <tr>
-                                    <td><%= watchLater[i][0]%></td>
-                                    <td><%= watchLater[i][1].toDateString()%></td>
+                                    <td><%= watchLater[i][1]%></td>
+                                    <td><%= watchLater[i][2].toDateString()%></td>
                                     <td class="action">
-                                        <a href="#remove-later"><span id="delete"
-                                                style="cursor:pointer">Remove</span></a>
+                                        <a href="user-panel-list/later/<%= watchLater[i][0]%>" onclick="return confirm('Are you sure you want to delete this item?')"><span id="delete" style="cursor:pointer">Remove</span></a>
                                         <a href="#play-list"><span id="play" style="cursor:pointer">Play</span></a>
                                     </td>
                                 </tr>

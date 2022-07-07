@@ -37,7 +37,7 @@
                     <h3>Customers</h3>
                 </a>
                 
-                <!-- Subscriptions -->
+                <!-- Subscriptions --> 
                 <a href="admin-panel-subscribers"><span class="material-icons">subscriptions</span><h3>Subscriptions</h3></a>
                 
                 <!-- Actors -->
@@ -132,7 +132,7 @@
             <!-- Pop up to update info  -->
             <div class="popup" id="update-admin">
                 <div class="wrapper">
-                    <h2>UPDATING ACTOR</h2>
+                    <h2>UPDATING ADMIN</h2>
                     <a class="close" href="#">&times;</a>
                     <div class="content">
                         <div class="content-container">
@@ -177,11 +177,15 @@
                     <tbody>
                         <%for (let i = 0; i < adminData.length; i++) {%>
                             <tr>
-                                <td><%= adminData[i][0]%></td>
                                 <td><%= adminData[i][1]%></td>
                                 <td><%= adminData[i][2]%></td>
                                 <td><%= adminData[i][3]%></td>
-                                <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td>
+                                <td><%= adminData[i][4]%></td>
+                                <td class="action">
+                                    <a href="#update-admin"><span>Update</span></a>
+                                    <a href="admin-panel-admin/<%= adminData[i][0]%>" onclick="return confirm('Are you sure you want to delete this item?')"><span>Delete</span></a>
+                                </td>
+                                <!-- <td class="action"><span style="cursor:pointer" onclick="openNav()">Preview</span></td> -->
                             </tr>
                         <%}%>
                     </tbody>
