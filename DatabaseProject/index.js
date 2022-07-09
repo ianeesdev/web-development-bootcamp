@@ -146,7 +146,7 @@ app.post('/user-panel-login', (req, res) => {
                 var length = result.rows.length;
                 if (length != 0) {
                     data = result.rows[0];
-                    res.render(path.join(__dirname, '/views/user-panel-profile'), { data });
+                    res.redirect('user-panel-profile');
                 }
                 else {
                     res.redirect('user-panel-login#redirect');
@@ -477,6 +477,7 @@ app.post('/user-panel-others', (req, res) => {
                 }
                 let feedback_id = result.rows[0][0];
                 insertFeedback(user_id, feedback_id, feedback, date);
+                res.redirect('user-panel-others');
             }
         )
     },
@@ -504,14 +505,6 @@ function insertFeedback(uid, fid, text, date) {
         )
     })
 }
-
-app.get('/user-panel-play-movies', (req, res) => {
-    res.render(path.join(__dirname, '/views/user-panel-play-movies'))
-})
-
-app.get('/user-panel-play-series', (req, res) => {
-    res.render(path.join(__dirname, '/views/user-panel-list'))
-})
 
 // new customer subscription page
 app.get('/user-panel-subscription', (req, res) => {
@@ -595,7 +588,7 @@ function insertSubscription(cid, sid, subType, packagePrice, payMethod, cardNo, 
 }
 
 
-// ADMIN MODULE
+// ADMIN MODULE////////////////////////////////////////////////////////////
 app.get('/admin-panel-login', (req, res) => {
     res.render(path.join(__dirname, "/views/admin-panel-login"));
 });

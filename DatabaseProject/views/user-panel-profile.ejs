@@ -155,38 +155,38 @@
                             <a class="close" href="#">&times;</a>
                             <div class="content">
                                 <div class="content-container">
-                                    <form>
+                                    <form action="#" method="post">
                                         <div class="name">
                                             <label>Full Name</label>
 
                                             <!-- Current Name will be fetched and placed here -->
-                                            <input value="<%= data[1] %>" type="text">
+                                            <input name="updName" value="<%= data[1] %>" type="text">
                                         </div>
 
                                         <div class="password">
                                             <label>Password</label>
 
                                             <!-- Current Name will be fetched and placed here -->
-                                            <input value="<%= data[2] %>" type="text">
+                                            <input name="updPass" value="<%= data[2] %>" type="text">
                                         </div>
 
                                         <div class="email">
                                             <label>Email</label>
 
                                             <!-- Current Name will be fetched and placed here -->
-                                            <input value="<%= data[3] %>" type="text">
+                                            <input name="updEmail" value="<%= data[3] %>" type="text">
                                         </div>
 
                                         <div class="contact">
                                             <label>Contact</label>
 
                                             <!-- Current Name will be fetched and placed here -->
-                                            <input value="<%= data[4] %>" type="text">
+                                            <input name="updContact" value="<%= data[4] %>" type="text">
                                         </div>
 
                                         <div class="gender">
                                             <label>Gender</label> 
-                                            <select name="picker" id="gender-spec">
+                                            <select name="updPicker" id="gender-spec">
                                                 <option value="" selected>Select gender</option>
                                                 <option value="Male">Male</option>
                                                 <option value="Female">Female</option>
