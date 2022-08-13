@@ -1,6 +1,7 @@
 const express = require("express");
 const https = require("https");
 const bodyparser = require("body-parser");
+const {ids} = require("D:/Visual Studio/WebDev/Web Development/APIs/Newsletter-Signup/secret.js");
 
 const app = express();
 app.use(bodyparser.urlencoded({ extended: false }));
@@ -11,7 +12,7 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
     const city = req.body.cityName;
-    const appid = "4ab0522233de8f480810483551aef095";
+    const appid = ids.weatherid;
     const unit = "metric";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${appid}&units=${unit}`;
     https.get(url, (response) => {
