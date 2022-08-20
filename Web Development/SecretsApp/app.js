@@ -1,6 +1,8 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const md5 = require("md5");
 
 const app = express();
 
@@ -31,7 +33,7 @@ app.get("/register", (req, res) => {
 
 app.post("/register", (req, res) => {
     const username = req.body.username;
-    const password = req.body.password;
+    const password = md5(req.body.password);
 
     const newUser = new User({
         email: username,
@@ -46,9 +48,9 @@ app.post("/register", (req, res) => {
 });
 
 app.post("/login", (req, res) => {
-    const email = req.body.username;
-    const password = req.body.password;
-    User.findOne({username: email}, (error, foundUser) => {
+    const username = req.body.username;
+    const password = md5(req.body.password);
+    User.findOne({email: username}, (error, foundUser) => {
         if (!error) {
             if (foundUser) {
                 if (foundUser.password === password) {
