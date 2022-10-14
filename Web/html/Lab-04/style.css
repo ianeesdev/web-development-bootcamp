@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+input:focus {
+    outline: none
+}
+
+select:focus {
+    outline: none;
+}
+
+input {
+    text-indent: 7px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.member-login {
+    width: 300px;
+    height: 196px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
+    background-color: white;
+    border: 2px solid grey;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.login-text {
+    height: 35px;
+    padding: 10px;
+    color: white;
+    margin-bottom: 4px;
+    background-color: grey;
+}
+
+.field-edit {
+    height: 35px;
+    width: 300px;
+    border-color: grey;
+    border-radius: 0px;
+}
+
+.field-edit-borderleft {
+    border-left: none;
+}
+
+.field-edit-bordertop {
+    border-top: none;
+}
+
+.field-edit-borderRight {
+    border-right: none;
+}
+
+.fg-pass {
+    padding-left: 5px;
+}
+
+.login-btn {
+    width: 70px;
+    border: none;
+    height: 35px;
+    color: white;
+    margin-top: 20px;
+    margin-left: 103px;
+    border-radius: 5px;
+    background-color: rgb(84, 84, 223);
+}
+
+.member-signup {
+    width: 602px;
+    height: 395px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 6px;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.detail-txt {
+    padding-top: 14px;
+    margin-left: 6px;
+    padding-bottom: 14px;
+}
+
+.sigup-btn {
+    margin-top: 20px;
+    margin-left: 270px;
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: rgb(84, 84, 223);
+    color: white;
+    border: none;
+}
+
+.selectClass {
+    width: 601px;
+    border-bottom: 2px solid grey;
+}

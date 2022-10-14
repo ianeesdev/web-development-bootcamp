@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 01</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="border: 6px solid black;">
+            <div style="display: inline-block; position: absolute; margin-bottom: 10px;">
+                <img src="https://www.kindpng.com/picc/m/654-6544158_comsats-university-logo-png-transparent-png.png" alt="comsats-logo" style="width: 115px; display:inline">
+            </div>
+            <div style="display: inline; position: absolute">
+                <h1 style="margin-left: 380px; display: inline-block; background-color: black; color: white">Non Faculty Job Application Form</h1>
+                <h2 style="margin-left: 325px; display: inline; font-size: 29px">COMSATS Institite of Information Technology</h2>
+            </div>
+            <div style="border: 2px solid black; display: inline-block; margin-left: 1124px; width: 100px; height: 110px; text-align: center; margin-bottom: 4px; margin-top: 4px">
+                <p style="display: inline-block; font-size: 15px"> Affix a <br> recent <br> photograph <br> 3cm x 5cm</p>
+            </div>
+        </div>
+    </header>
+    <div>
+        <form action="">
+            <div style="border: 4px solid black; margin-top: 15px; margin-left: 10px; margin-right: 10px">
+                <h2 style="display: inline-block; margin: 0px; margin-left: 30px">1.</h2>
+                <label style="display: inline-block; margin-left: 40px; font-weight: bold; margin-top: 30px">Post applied for <input style="margin-left: 150px; width: 320px" type="text" placeholder="Student" name="postText" disabled> <br>
+                    <p style="display: inline-block; font-weight: normal; font-style: italic; margin-top: 0px">(only apply for one position)</p>
+                </label> <br>
+                <h2 style="display: inline-block; margin: 0px; margin-left: 30px">2.</h2>
+                <label style="display: inline-block; margin-left: 40px; font-weight: bold; margin-top: 30px">Department <select style="margin-left: 175px;" name="dept" required>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                    <option value="humanities">Humanities</option>
+                    </select><br>
+                    <p style="display: inline-block; font-weight: normal; font-style: italic; margin-top: 0px">(mention department, if required)</p>
+                </label>
+            </div>
+            <div style="border: 4px solid black; margin-top: 15px; margin-left: 10px; margin-right: 10px">
+                <h2 style="display: inline-block; margin: 0px; margin-left: 30px">3.</h2>
+                <label style="display: inline-block; margin-left: 40px; font-weight: bold; margin-top: 30px">First name <input style="margin-left: 180px; width: 320px" placeholder="Alice" type="text" name="postText" required> <br>
+                </label> <br>
+                <h2 style="display: inline-block; margin: 0px; margin-left: 30px">4.</h2>
+                <label style="display: inline-block; margin-left: 40px; font-weight: bold; margin-top: 30px">Last name <input style="margin-left: 180px; width: 320px" type="text" placeholder="John" name="postText" autocomplete="on"> <br>
+                </label> <br>
+                <h2 style="display: inline-block; margin: 0px; margin-left: 30px">5.</h2>
+                <label style="display: inline-block; margin-left: 40px; font-weight: bold; margin-top: 30px">Email Address<input style="margin-left: 155px; width: 320px" type="email" placeholder="email@gmail.com" name="postText" required> <br>
+                </label> <br>
+                <h2 style="display: inline-block; margin: 0px; margin-left: 30px">6.</h2>
+                <label style="display: inline-block; margin-left: 40px; font-weight: bold; margin-top: 30px">Password <input style="margin-left: 183px; width: 320px" type="password" placeholder="cgh@123s" name="postText" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> <br>
+                </label> <br>
+                <h2 style="display: inline-block; margin: 0px; margin-left: 30px">7.</h2>
+                <label style="display: inline-block; margin-left: 40px; font-weight: bold; margin-top: 30px">Mobile Number<input style="margin-left: 145px; width: 320px" type="number" placeholder="01234567893" maxlength="11" name="postText"> <br>
+                </label> <br>
+                <h2 style="display: inline-block; margin: 0px; margin-left: 30px">8.</h2>
+                <label style="display: inline-block; margin-left: 40px; font-weight: bold; margin-top: 30px">Date of birth<input style="margin-left: 164px; width: 320px" type="date" name="postText"> <br>
+                </label> <br>
+                <h2 style="display: inline-block; margin: 0px; margin-left: 30px">9.</h2>
+                <label style="display: inline-block; margin-left: 40px; font-weight: bold; margin-top: 30px">Gender <label><input style="display: inline-block; margin-left: 195px; margin-bottom: 15px" type="radio" name="gender" value="m" checked/>Male<label> <label><input style="display: inline-block;" type="radio" name="gender" value="f" />Female</label>
+                </label> <br>
+            </div>
+            <div style="border: 4px solid black; margin-top: 15px; margin-left: 10px; margin-right: 10px">
+                <h2 style="display: inline-block; margin: 0px; margin-left: 30px">10.</h2>
+                <label style="display: inline-block; margin-left: 26px; font-weight: bold; margin-top: 30px">Address</label> <textarea style="margin-left: 190px; margin-top: 17px" rows="3" cols="50" placeholder="123 Main Street, New York, NY 10030"></textarea> <br>
+                </label> <br>
+                <h2 style="display: inline-block; margin: 0px; margin-left: 30px">11.</h2>
+                <label style="display: inline-block; margin-left: 26px; font-weight: bold; margin-top: 30px">Favorite color?<input style="margin-left: 145px; width: 320px" type="color" value="#ff0000" name="postText"> <br>
+                </label> <br>
+                <label style="display: inline-block; margin-left: 32px; font-weight: bold; margin-top: 30px; font-size:20px; margin-bottom: 20px">I agree to terms and conditions. <input style="margin-left: 30px" type="checkbox" name="checkbox" value="checkbox"><br>
+                </label> <br>
+                <button style="margin-left: 560px; margin-bottom: 10px" type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
