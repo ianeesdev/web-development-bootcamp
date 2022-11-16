@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: 6pc;
+    padding: 10px;
+    background-color: turquoise;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+    margin-bottom: 30px;
+}
+
+header p {
+    margin: 10px;
+    padding: 18px;
+    font-size: 15px;
+    text-align: center;
+    background-color: lightblue;
+}
+
+article {
+    position: relative;
+    margin: 6px 12px;
+    width: 760px;
+    height: 330px;
+    font-size: 16px;
+    border: 10px solid purple;
+}
+
+article h3 {
+    position: absolute;
+    width: 370px;
+    height: 25px;
+    top: 120px;
+    right: 0;
+    font-size: 20px;
+    border: 5px solid red;
+}
+
+nav {
+    display: flex;
+    width: fit-content;
+    background-color: lightsalmon;
+}
+
+nav span {
+    margin: 10px;
+    background-color: green;
+}
+
+nav p {
+    margin: 10px;
+    width: 180px;
+    padding: 18px;
+    font-size: 20px;
+    text-align: center;
+    background-color: lightgreen;
+}
+
+aside {
+    display: flex;
+    width: fit-content;
+    background-color: lightsalmon;
+}
+
+aside span {
+    margin: 10px;
+    background-color: green;
+}
+
+aside p {
+    margin: 10px;
+    padding: 18px;
+    width: 180px;
+    font-size: 20px;
+    text-align: center;
+    background-color: lightgreen;
+}
+
+footer {
+    height: 6pc;
+    padding: 13px;
+    background-color: turquoise;
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+}
+
+footer p {
+    margin: 10px;
+    padding: 18px;
+    font-size: 16px;
+    text-align: center;
+    background-color: lightblue;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-heading {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.services-list {
+    margin-top: 20px;
+    margin-left: 35px;
+}

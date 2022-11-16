@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    padding: 7px;
+}
+
+textarea {
+    padding-top: 7px;
+    padding-left: 7px;
+}
+
+label {
+    font-weight: bold;
+}
+
+body {
+    background-color: #B8E8FC
+}
+
+form {
+    padding: 10px;
+    padding-left: 12px;
+}
+
+button {
+    width: 99%;
+    height: 40px;
+}
+
+.input-fields {
+    width: 98%;
+    height: 25px;
+    margin-bottom: 10px;
+    padding-left: 3px;
+}
+
+.uni-name {
+    margin-top: 14px;
+    text-align: center;
+}
+
+.form-name {
+    text-indent: 7px;
+    text-align: center;
+}
+
+.register-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.cancel-btn {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.contact-num {
+    margin-top: 5px;
+}

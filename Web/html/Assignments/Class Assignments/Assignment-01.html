@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-01</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <fieldset>
+            <legend> <b>Muhammad Anees (FA20-BCS-045) Registration Form</b> </legend>
+
+            <label> <b>Enter Your First Name: </b> </label>
+            <input placeholder="First name" type="text" required> <br>
+            <br>
+
+            <label> <b>Enter Your Last name: </b> </label> 
+            <input type="text" placeholder="Last name" autocomplete="on"> <br>
+            <br>
+
+            <label> <b>Enter Your Email Address: </b> </label> 
+            <input type="email" placeholder="Email address" required> <br>
+            <br>
+
+            <label> <b>Enter Your Password: </b> </label> 
+            <input type="password" placeholder="Enter password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> <br>
+            <br>
+
+            <label> <b>Enter Your CNIC: </b> </label>
+            <input type="number" placeholder="Enter CNIC" maxlength="11"> <br>
+            <br>
+
+            <label> <b>Select Your Gender: </b> </label>
+            <input type="radio" name="gender" value="m" checked/>Male
+            <input type="radio" name="gender" value="f" />Female <br>
+            <br>
+
+            <label> <b>Nationality: </b> </label> 
+            <input type="text" placeholder="Pakistani" autocomplete="on"> <br>
+            <br>
+
+            <label> <b>Department: </b> </label> 
+            <input type="text" placeholder="Computer Science(CS)" disabled> <br>
+            <br>
+
+            <label> <b>Choose Your Degree Program: </b> </label> 
+            <select name="dept" size="2" required>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Software Engineering">Electrical Engineering</option>
+                </select><br>
+            <br>
+            
+            <label> <b>Enter Your Mobile Number: </b> </label>
+            <input type="number" placeholder="+92" min="1" max="0" readonly>
+            <input type="number" placeholder="Enter number" maxlength="10"> <br>
+            <br>
+
+            <label> <b>Enter Your Portal Address: </b> </label> 
+            <textarea rows="3" cols="50" placeholder="123 Main Street, New York, NY 10030"></textarea> <br>
+            <br>
+
+            <label> <b>Enter Your Date of Birth: </b> </label> 
+            <input type="date" name="dob"> <br>
+            <br>
+
+            <label> <b>Choose Your Favorite color?:  </b> </label>
+            <input type="color" value="#ff0000"> <br>
+            <br>
+
+            <label> <b>Choose your Favorite Social Media Platform: </b> </label>
+            <input list="apps" name="app">
+            <datalist id="apps">
+                <option value="Instagram">
+                <option value="Twitter">
+                <option value="Whatsapp">
+                <option value="Facebook">
+                <option value="Snapchat">
+            </datalist> <br>
+            <br>
+
+            <label> <b>Upload Your Latest CV: </b> </label>
+            <input type="file" name="cvFile"> <br>
+            <br>
+
+            <input type="checkbox" name="checkbox" value="checkbox">
+            <label> <b>DISCLAIMER: This information provided by me (Muhammad Anees FA20-BCS-045) is for CSC336 Assignment 1 only</b> </label><br>
+            <br>
+
+            <button type="submit">Submit Now</button>
+            <button type="reset">Reset Form</button>
+
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+* {
+    font-family: Calibri, 'Gill Sans';
+}
+
+body {
+    background-color: lightgreen;
+}
+
+label {
+    font-size: larger;
+    font-weight: bold;
+}
+
+input {
+    width: 95%;
+    height: 20px;
+    padding: 5px;
+    font-size: medium;
+    border-radius: 5px;
+    border-color: white;
+}
+
+button {
+    width: 97%;
+    margin: 5px;
+    border: none;
+    padding: 8px;
+    color: blue;
+    border-radius: 5px;
+    font-size: larger;
+    background-color: rgb(94, 198, 106);
+}
+
+.heading {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text {
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.registration-form {
+    padding: 12px;
+    border-radius: 4px;
+    background-color: lightblue;
+}
+
+.login-form {
+    padding: 13px;
+    height: 30%;
+    border-radius: 4px;
+    background-color: lightpink;
+}

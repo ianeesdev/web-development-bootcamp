@@ -1,0 +1,44 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
+    font-size: x-large;
+}
+
+.box1 {
+    position: fixed;
+    border: 2px solid purple;
+    top: 0;
+    right: 0;
+}
+
+.box2 {
+    position: static;
+    border: 4px solid red;
+}
+
+.box3 {
+    position: relative;
+    border: 6px solid blue;
+    left: 6px;
+}
+
+.box4 {
+    position: sticky;
+    border: 8px solid green;
+    bottom: 0;
+}
+
+.box5 {
+    position: relative;
+    border: 10px solid blue;
+    width: 510px;
+    height: 310px;
+}
+
+.box6 {
+    position: absolute;
+    border: 12px solid green;
+    top: 200;
+    right: 0;
+    width: 212px;
+    height: 112px;
+}

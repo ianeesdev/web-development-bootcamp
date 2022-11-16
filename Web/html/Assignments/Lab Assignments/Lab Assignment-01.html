@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-01</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <fieldset>
+        <legend> <h3>CSC336 COURSE WEB PORTAL (FA22 SESSION)</h3> </legend>
+        <div class="container">
+            <div class="registration-form">
+                <h1 class="heading">REGISTRATION</h1>
+                <p class="heading text">Registration for CSS336 Course(FA22 Session)</p>
+                <form action="#" method="get">
+                    <label>Name  </label> <br>
+                    <input placeholder="Enter complete name" type="text" required> <br>
+                    <br>
+        
+                    <label>Registration  </label> <br>
+                    <input type="text" placeholder="Enter complete registration" 
+                    autocomplete="on"> <br>
+                    <br>
+        
+                    <label>Contact </label> <br>
+                    <input type="number" placeholder="Enter mobile number" 
+                    maxlength="11"> <br>
+                    <br>
+        
+                    <label>Email </label> <br>
+                    <input type="email" placeholder="Email address" required> <br>
+                    <br>
+        
+                    <label>Password </label> <br>
+                    <input type="password" placeholder="Enter password" 
+                    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> <br>
+                    <br>
+        
+                    <label>Confirm Password </label> <br>
+                    <input type="password" placeholder="Re-type password" 
+                    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> <br>
+                    <br>
+        
+                    <button type="submit">Course Registration</button> <br>
+                    <button type="reset">Reset</button>
+                    <p class="heading">
+                        By clicking "Course Registration", you agree to <br>
+                        <a href="#">CSC336 Course Policy and Procedures</a>
+                    </p>
+                </form>
+            </div>
+
+            <div class="login-form">
+                <h1 class="heading">LOGIN</h1>
+                <p class="heading text">Login for CSC336 Course (FA22 Session)</p>
+                <form action="">
+                    <label>Email </label> <br>
+                    <input type="email" placeholder="Email address" required> <br>
+                    <br>
+
+                    <li></li>
+        
+                    <label>Password </label> <br>
+                    <input type="password" placeholder="Enter password" 
+                    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> <br>
+                    <br>
+                    <button type="submit">Submit</button> <br>
+                    <button type="reset">Reset</button>
+                </form>
+            </div>
+        </div>
+    </fieldset>
+</body>
+</html>
