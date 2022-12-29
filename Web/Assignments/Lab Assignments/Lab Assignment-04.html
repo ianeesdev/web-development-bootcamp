@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Assignment-04</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./Lab Assignment-04.css">
+    <script src="./Lab Assignment-04.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container text-center">
+        <h1 class="text-secondary pt-3">JQuery Effects</h1>
+    </div>
+
+    <div class="container">
+        <div class="row m-5">
+
+            <!-- Animate Image -->
+            <div class="col-4 border-end border-bottom border-dark text-center">
+                <button class="btn btn-info" id="animate-btn">Animate Image</button>
+                <button class="btn btn-outline-info" id="reset-btn">Reset Image</button>
+                <img class="animate-img img-fluid mt-1" height="150px" width="180px" src="./img.png" alt="imagee">
+            </div>
+
+            <!-- Hide and Show Message -->
+            <div class="col-4 border-end border-bottom border-dark text-center">
+                <div id="msg" class="mb-3">Click “Hide Message” button to hide, and “Show Message” button to show message.</div>
+                <button class="btn btn-info" id="hide">Hide Message</button>
+                <button class="btn btn-outline-info" id="show">Show Message</button>
+            </div>
+
+            <!-- Toogle Message Hide and Show -->
+            <div class="col-4 border-bottom border-dark text-center">
+                <div id="message" class="mb-3">Click the “Toggle Message” button to hide and show the message.</div>
+                <button id="toogle" class="btn btn-info">Toogle Message</button>
+            </div>
+        </div>
+
+
+        <div class="row m-5">
+            <!-- Fade in and Fade out Message -->
+            <div class="col-4 border-end border-bottom border-dark text-center">
+                <div id="msg-fade" class="mb-3">Click “Fade In Message” button to fade in, and “Fade Out Message” button to fade out.</div>
+                <button id="fade-in" class="btn btn-outline-info mb-4">Fade In Message</button>
+                <button id="fade-out" class="btn btn-info mb-4">Fade Out Message</button>
+            </div>
+
+            <!-- Toggle Message Fade In and Fade Out -->
+            <div class="col-4 border-end border-bottom border-dark text-center">
+                <div id="fade-msg" class="mb-3">Click the “Toggle Message” button to fade in fade out the message.</div>
+                <button id="toogle-fade" class="btn btn-info">Toggle Message</button>
+            </div>
+
+            <!-- Fade To Message -->
+            <div class="col-4 border-bottom border-dark text-center">
+                <div id="fadeMsg" class="mb-3">Click the “Fade To Message” button to fade in.</div>
+                <button id="fadeToMsg" class="btn btn-info">Fade To Message</button>
+            </div>
+        </div>
+
+
+        <div class="row m-5">
+            <!-- Chaining -->
+            <div class="col-4 border-end border-dark text-center">
+                <div id="p1" class="mb-3">Click on “Click Me” to see chaining methods effect on element!</div>
+                <button id="chaining" class="btn btn-info">Click Me</button>
+            </div>
+
+            <!-- Toogle Message Slide -->
+            <div class="col-4 text-center">
+                <div id="flip" class="bg-success">Click To Slide The Panel Down or Up</div>
+                <div id="panel" class="bg-success">Lab Assignment 4, Prepared by Muhammad Anees FA20-BCS-045.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
